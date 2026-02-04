@@ -102,8 +102,6 @@
       fetch(`${base}/words.json`).then((r) => (r.ok ? r.json() : []))
     ]);
 
-    const normInstructions = (instructions||[]).map(it => ({...it, en: it.en ?? it.text_en ?? it.prompt_en ?? it.question_en ?? it.instruction_en ?? "", zh: it.zh ?? it.text_zh ?? it.prompt_zh ?? it.question_zh ?? it.instruction_zh ?? ""}));
-
     const wordIndex = {};
     const phraseList = [];
     for (const w of words || []) {
@@ -430,7 +428,14 @@
   function renderRead(host, key, ds) {
     const idx = Math.max(0, Math.min(ds.instructions.length - 1, state.idx[key] || 0));
     state.idx[key] = idx;
-    const item = ds.instructions[idx] || { en: "", zh: "" };
+    // Dataset compatibility: support both {en, zh} and {text_en, text_zh}
+    const raw = ds.instructions[idx] || {};
+    const item = {
+      ...raw,
+      en: raw.en ?? raw.text_en ?? raw.textEn ?? "",
+      zh: raw.zh ?? raw.text_zh ?? raw.textZh ?? "",
+      topic: raw.topic ?? raw.category ?? raw.unit ?? raw.section ?? "",
+    };
 
     const card = document.createElement("div");
     card.className = "card";
