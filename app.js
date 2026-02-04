@@ -102,6 +102,8 @@
       fetch(`${base}/words.json`).then((r) => (r.ok ? r.json() : []))
     ]);
 
+    const normInstructions = (instructions||[]).map(it => ({...it, en: it.en ?? it.text_en ?? it.prompt_en ?? it.question_en ?? it.instruction_en ?? "", zh: it.zh ?? it.text_zh ?? it.prompt_zh ?? it.question_zh ?? it.instruction_zh ?? ""}));
+
     const wordIndex = {};
     const phraseList = [];
     for (const w of words || []) {
