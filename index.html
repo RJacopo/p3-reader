@@ -1,91 +1,252 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>P3 Reader • Jayden</title>
-  <meta name="theme-color" content="#111827" />
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#e9f7ea"/>
+  <title>P3 Reader · bilingual · offline</title>
+  <link rel="manifest" href="manifest.json"/>
   <style>
-    :root { --bg:#0b1220; --panel:#111827; --card:#0f172a; --muted:#94a3b8; --text:#e5e7eb; --accent:#22c55e; --warn:#f59e0b; --bad:#ef4444; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text); }
-    header { position: sticky; top: 0; z-index: 5; background: rgba(17,24,39,.92); backdrop-filter: blur(10px); border-bottom:1px solid rgba(148,163,184,.15); padding: 10px 12px; }
-    .topbar { display:flex; gap:10px; align-items:center; justify-content:space-between; }
-    .brand { font-weight:700; letter-spacing:.2px; font-size: 16px; }
-    .badge { font-size:12px; color: var(--muted); }
-    .tabs { display:flex; gap:8px; overflow:auto; padding: 10px 2px 2px; }
-    .tab { flex:0 0 auto; border:1px solid rgba(148,163,184,.2); background: rgba(15,23,42,.7); color: var(--text); padding:8px 10px; border-radius: 999px; font-size: 13px; }
-    .tab.active { border-color: rgba(34,197,94,.6); box-shadow: 0 0 0 2px rgba(34,197,94,.15) inset; }
-    main { padding: 12px; max-width: 980px; margin: 0 auto; }
-    .row { display:flex; gap:10px; flex-wrap:wrap; }
-    .panel { background: rgba(17,24,39,.75); border:1px solid rgba(148,163,184,.15); border-radius: 16px; padding: 12px; }
-    .panel h2 { margin: 0 0 8px; font-size: 16px; }
-    .subtabs { display:flex; gap:8px; margin: 10px 0 12px; }
-    .subtab { padding:8px 10px; border-radius: 12px; border:1px solid rgba(148,163,184,.2); background: rgba(15,23,42,.65); font-size: 13px; }
-    .subtab.active { border-color: rgba(34,197,94,.55); }
-    .card { background: rgba(15,23,42,.75); border:1px solid rgba(148,163,184,.15); border-radius: 16px; padding: 14px; }
-    .card + .card { margin-top: 12px; }
-    .muted { color: var(--muted); }
-    .pill { display:inline-flex; gap:6px; align-items:center; padding:4px 10px; border-radius:999px; border:1px solid rgba(148,163,184,.2); color: var(--muted); font-size: 12px; }
-    .kw { padding: 0 3px; border-bottom: 2px solid rgba(245,158,11,.8); cursor: pointer; }
-    .kw:hover { background: rgba(245,158,11,.12); border-radius: 6px; }
-    .btn { border:1px solid rgba(148,163,184,.25); background: rgba(2,6,23,.35); color: var(--text); padding: 10px 12px; border-radius: 12px; font-size: 14px; }
-    .btn.primary { border-color: rgba(34,197,94,.5); background: rgba(34,197,94,.12); }
-    .btn.danger { border-color: rgba(239,68,68,.55); background: rgba(239,68,68,.12); }
-    .btn.small { padding: 7px 10px; font-size: 13px; border-radius: 10px; }
-    .btn:disabled { opacity:.55; }
-    .grid2 { display:grid; grid-template-columns: 1fr; gap: 10px; }
-    @media (min-width: 800px){ .grid2 { grid-template-columns: 1.15fr .85fr; } }
-    .choices { display:flex; gap:8px; flex-wrap:wrap; margin-top: 8px; }
-    .chip { border:1px solid rgba(148,163,184,.25); background: rgba(2,6,23,.25); padding: 8px 10px; border-radius: 12px; font-size: 13px; cursor:pointer; user-select:none; }
-    .chip.sel { border-color: rgba(34,197,94,.55); background: rgba(34,197,94,.12); }
-    .hr { height: 1px; background: rgba(148,163,184,.15); margin: 12px 0; }
-    .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: 18px; background: rgba(17,24,39,.92); border:1px solid rgba(148,163,184,.22); padding: 10px 12px; border-radius: 12px; font-size: 13px; display:none; max-width: 92vw; }
-    dialog { border:none; border-radius: 16px; padding: 0; width: min(560px, 92vw); background: rgba(15,23,42,.98); color: var(--text); }
-    dialog::backdrop { background: rgba(0,0,0,.55); }
-    .dlg { padding: 14px; }
-    .dlg h3 { margin: 0 0 6px; font-size: 16px; }
-    .dlg .close { float:right; }
-    input, select { width: 100%; padding: 10px 12px; border-radius: 12px; border:1px solid rgba(148,163,184,.2); background: rgba(2,6,23,.3); color: var(--text); font-size: 14px; }
-    label { font-size: 12px; color: var(--muted); display:block; margin: 10px 0 6px; }
-    .score { font-weight:800; font-size: 22px; }
-    .kpi { display:flex; gap:10px; flex-wrap: wrap; }
-    .kpi .panel { flex:1 1 240px; }
+    :root{
+      --bg:#e9f7ea;
+      --panel:#f7fff7;
+      --text:#0b2311;
+      --muted:#355a3f;
+      --line:#c6e6cd;
+      --accent:#1f8a3a;
+      --accent2:#0c5f25;
+      --chip:#e3f4e6;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+      --font: ui-sans-serif, system-ui, -apple-system, "SF Pro Display", "SF Pro Text", "PingFang SC", "Microsoft YaHei", Arial;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      --fs: 18px;
+      --lh: 1.55;
+    }
+    .theme-dark{
+      --bg:#07130b;
+      --panel:#0b1c11;
+      --text:#eaf7ee;
+      --muted:#b4d6bf;
+      --line:#163b24;
+      --accent:#37d46d;
+      --accent2:#77f0a0;
+      --chip:#0f2a19;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:var(--font);
+      font-size:var(--fs);
+      line-height:var(--lh);
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(31,138,58,.18), transparent 55%),
+                  radial-gradient(900px 500px at 100% 10%, rgba(31,138,58,.12), transparent 55%),
+                  var(--bg);
+    }
+    .wrap{max-width:1100px; margin:0 auto; padding:18px 14px 40px;}
+    header{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      position:sticky; top:0; z-index:5;
+      padding:10px 0 12px;
+      background: linear-gradient(to bottom, var(--bg), rgba(0,0,0,0));
+      backdrop-filter:saturate(1.2) blur(6px);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .brand .t{font-weight:800; letter-spacing:.2px}
+    .brand .s{font-size:.86em; color:var(--muted)}
+    .controls{display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end;}
+    button, .btn{
+      font:inherit;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:14px;
+      box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+      cursor:pointer;
+    }
+    button:hover{border-color:color-mix(in srgb, var(--line), var(--accent) 35%);}
+    button.primary{
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 18%, var(--panel)), var(--panel));
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+    }
+    button.ghost{background:transparent;}
+    .tabs{
+      display:flex; gap:8px; flex-wrap:wrap;
+      padding:8px; border:1px solid var(--line);
+      background:color-mix(in srgb, var(--panel), transparent 8%);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .tab{
+      padding:10px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      cursor:pointer;
+      user-select:none;
+    }
+    .tab.active{
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+    .panel{
+      margin-top:14px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--panel), transparent 5%);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-h{
+      padding:14px 14px 10px;
+      border-bottom:1px solid var(--line);
+      display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    .panel-h .left{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+    .badge{
+      font-size:.82em;
+      color:var(--muted);
+      padding:6px 10px;
+      border:1px solid var(--line);
+      background:var(--chip);
+      border-radius:999px;
+    }
+    .subtabs{display:flex; gap:8px; flex-wrap:wrap;}
+    .content{padding:14px;}
+    .card{
+      border:1px solid var(--line);
+      background:var(--panel);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .en{font-size:1.25em; font-weight:750; letter-spacing:.2px;}
+    .cn{margin-top:8px; color:var(--muted); font-size:1.05em;}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .chip{
+      border:1px solid var(--line);
+      background:var(--chip);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:.9em;
+      color:var(--muted);
+    }
+    .kw{
+      cursor:pointer;
+      border-bottom: 2px dotted color-mix(in srgb, var(--accent) 60%, transparent);
+      padding-bottom:1px;
+    }
+    .kw:hover{
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      border-bottom-color: var(--accent);
+    }
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center;}
+    .row .spacer{flex:1}
+    .hint{color:var(--muted); font-size:.92em}
+    .quiz-opt{
+      display:block; width:100%;
+      text-align:left;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      margin-top:10px;
+    }
+    .quiz-opt.good{border-color: color-mix(in srgb, var(--accent) 70%, var(--line));}
+    .quiz-opt.bad{border-color: #d35b5b;}
+    .grid2{display:grid; grid-template-columns: 1fr; gap:12px;}
+    @media (min-width:880px){ .grid2{grid-template-columns: 1.2fr .8fr;} }
+    input[type="text"]{
+      font:inherit; width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      outline:none;
+    }
+    input[type="text"]:focus{
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    }
+    .list{max-height:420px; overflow:auto; padding-right:4px;}
+    .item{
+      padding:10px 10px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:var(--panel);
+      margin-top:10px;
+    }
+    .item .k{font-weight:800}
+    .item .z{color:var(--muted); margin-top:4px}
+    dialog{
+      border:none; border-radius:20px;
+      width:min(720px, calc(100vw - 24px));
+      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+      background:var(--panel);
+      color:var(--text);
+      padding:0;
+    }
+    dialog::backdrop{background: rgba(0,0,0,.35);}
+    .dlg-h{
+      padding:14px 14px 10px;
+      border-bottom:1px solid var(--line);
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+    }
+    .dlg-b{padding:14px;}
+    .dlg-term{font-size:1.25em; font-weight:900;}
+    .mono{font-family:var(--mono); font-size:.92em; color:var(--muted);}
+    .pill{display:inline-flex; gap:8px; align-items:center; border:1px solid var(--line); background:var(--chip); padding:6px 10px; border-radius:999px;}
+    .small{font-size:.9em; color:var(--muted);}
   </style>
 </head>
 <body>
-<header>
-  <div class="topbar">
-    <div>
-      <div class="brand">P3 Reader <span class="badge">• bilingual • offline</span></div>
-      <div class="badge" id="statusLine">Loading…</div>
-    </div>
-    <button class="btn small" id="toggleCN">中文: 开</button>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="t">P3 Reader</div>
+        <div class="s">bilingual · offline-first · iPad Safari</div>
+      </div>
+      <div class="controls">
+        <button id="toggleCN" class="primary">中文：开</button>
+        <button id="themeBtn">主题：护眼绿</button>
+        <button id="fontMinus" class="ghost">A−</button>
+        <button id="fontPlus" class="ghost">A+</button>
+      </div>
+    </header>
+
+    <div id="tabs" class="tabs"></div>
+    <div id="main" class="panel"></div>
   </div>
-  <div class="tabs" id="tabs"></div>
-</header>
 
-<main id="app"></main>
-
-<dialog id="wordDialog">
-  <div class="dlg">
-    <button class="btn small close" onclick="document.getElementById('wordDialog').close()">Close</button>
-    <h3 id="wdTitle">Word</h3>
-    <div class="muted" id="wdPos"></div>
-    <div class="hr"></div>
-    <div id="wdBody"></div>
-    <div class="hr"></div>
-    <div class="row">
-      <button class="btn primary" id="addWordBtn">⭐ Add to Word Bank</button>
-      <button class="btn" onclick="document.getElementById('wordDialog').close()">OK</button>
+  <dialog id="glossDlg">
+    <div class="dlg-h">
+      <div>
+        <div class="dlg-term" id="dlgTerm"></div>
+        <div class="mono" id="dlgPhon"></div>
+      </div>
+      <div class="row" style="margin:0">
+        <button id="dlgSpeak" class="primary">🔊 英式</button>
+        <button id="dlgAdd" class="btn">➕ 加入单词本</button>
+        <button id="dlgClose" class="btn">关闭</button>
+      </div>
     </div>
-  </div>
-</dialog>
+    <div class="dlg-b">
+      <div id="dlgZh" style="font-size:1.05em; font-weight:700;"></div>
+      <div id="dlgDef" class="small" style="margin-top:10px"></div>
+      <div class="small" style="margin-top:10px">提示：点正文里的任意单词/短语即可查词。离线时会优先显示本地词库；联网时会补充释义/发音。</div>
+    </div>
+  </dialog>
 
-<div class="toast" id="toast"></div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    }
+  </script>
 </body>
 </html>

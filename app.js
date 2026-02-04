@@ -1,1097 +1,832 @@
-// P3 Reader (offline, bilingual) - vanilla JS
-const SUBJECTS = [
-  {key:'home', en:'Home', zh:'今日'},
-  {key:'math', en:'Math', zh:'数学'},
-  {key:'science', en:'Science', zh:'科学'},
-  {key:'english', en:'English', zh:'英语'},
-  {key:'social_studies', en:'Social Studies', zh:'社会研究'},
-  {key:'chinese', en:'Chinese', zh:'华文'},
-  {key:'quiz', en:'Quiz', zh:'测验'},
-  {key:'wordbank', en:'Word Bank', zh:'生词本'},
-  {key:'progress', en:'Progress', zh:'成果'},
-  {key:'backup', en:'Backup', zh:'备份'}
-];
+(() => {
+  const $ = (sel) => document.querySelector(sel);
 
-const SUBPAGES = ['learn','drills','words'];
-const SUBPAGE_LABELS = {
-  learn: {en:'Learn', zh:'读题'},
-  drills:{en:'Drills', zh:'快练'},
-  words: {en:'Words', zh:'词库'}
-};
+  const SUBJECTS = [
+    { key: "math", zh: "数学", en: "Math" },
+    { key: "science", zh: "科学", en: "Science" },
+    { key: "english", zh: "英语", en: "English" },
+    { key: "social_studies", zh: "社会研究", en: "Social Studies" },
+    { key: "chinese", zh: "华文", en: "Chinese" },
+    { key: "dictionary", zh: "词典", en: "Dictionary" },
+    { key: "wordbook", zh: "生词本", en: "Wordbook" },
+    { key: "progress", zh: "成果", en: "Progress" }
+  ];
 
-// ---------- Storage ----------
-const LS_KEY = 'p3_reader_state_v1';
-function loadState(){
-  try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch(e){ return {}; }
-}
-function saveState(s){ localStorage.setItem(LS_KEY, JSON.stringify(s)); }
-
-let state = loadState();
-state.cnOn = (state.cnOn !== false); // default on
-state.wordbank = state.wordbank || {}; // wordId -> {addedAt, mastery}
-state.stats = state.stats || {}; // subject -> {tagStats: {tag:{seen,wrong,lastTs}}, history:[...]}
-
-function bumpTag(subject, tags, correct){
-  state.stats[subject] = state.stats[subject] || { tagStats:{}, history:[] };
-  const ts = Date.now();
-  for(const t of (tags||[])){
-    const cur = state.stats[subject].tagStats[t] || {seen:0, wrong:0, lastTs:0};
-    cur.seen += 1;
-    if(!correct) cur.wrong += 1;
-    cur.lastTs = ts;
-    state.stats[subject].tagStats[t] = cur;
-  }
-  saveState(state);
-}
-
-function toast(msg){
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.style.display='block';
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(()=>{ el.style.display='none'; }, 1800);
-}
-
-// ---------- Data loading ----------
-const CACHE = { instructions:{}, words:{}, patterns:{} };
-
-async function loadJSON(path){
-  const res = await fetch(path);
-  if(!res.ok) throw new Error('Failed to load ' + path);
-  return await res.json();
-}
-
-async function loadSubjectData(subject){
-  if(subject==='home' || subject==='quiz' || subject==='wordbank' || subject==='progress' || subject==='backup') return;
-  if(CACHE.instructions[subject]) return;
-  const base = `data/${subject}/`;
-  const [inst, words, patterns] = await Promise.all([
-    loadJSON(base + 'instructions.json'),
-    loadJSON(base + 'words.json'),
-    loadJSON(base + 'patterns.json'),
-  ]);
-  CACHE.instructions[subject]=inst;
-  CACHE.words[subject]=words;
-  CACHE.patterns[subject]=patterns;
-}
-
-function findWord(subject, lemma){
-  const words = CACHE.words[subject] || [];
-  const norm = lemma.toLowerCase();
-  let w = words.find(x => (x.lemma||'').toLowerCase() === norm || (x.id||'').toLowerCase() === norm);
-  if(!w){
-    // fallback: search by synonyms
-    w = words.find(x => (x.synonyms||[]).map(s=>String(s).toLowerCase()).includes(norm));
-  }
-  return w || null;
-}
-
-// ---------- UI ----------
-let currentTab = state.currentTab || 'home';
-let currentSub = state.currentSub || 'learn';
-let currentLearnIndex = state.currentLearnIndex || {}; // per subject
-
-const tabsEl = document.getElementById('tabs');
-const appEl = document.getElementById('app');
-const toggleCNBtn = document.getElementById('toggleCN');
-
-toggleCNBtn.onclick = () => {
-  state.cnOn = !state.cnOn;
-  saveState(state);
-  toggleCNBtn.textContent = state.cnOn ? '中文: 开' : '中文: 关';
-  render();
-};
-
-function setStatus(msg){
-  document.getElementById('statusLine').textContent = msg;
-}
-
-function renderTabs(){
-  tabsEl.innerHTML='';
-  for(const t of SUBJECTS){
-    const btn = document.createElement('button');
-    btn.className = 'tab' + (t.key===currentTab ? ' active':'');
-    btn.textContent = state.cnOn ? t.zh : t.en;
-    btn.onclick = async () => {
-      currentTab = t.key;
-      state.currentTab = currentTab;
-      // reset subpage for special tabs
-      if(['home','quiz','wordbank','progress','backup'].includes(currentTab)) currentSub = 'learn';
-      saveState(state);
-      if(!['home','quiz','wordbank','progress','backup'].includes(currentTab)){
-        await loadSubjectData(currentTab);
-      }
-      render();
-    };
-    tabsEl.appendChild(btn);
-  }
-}
-
-function renderSubtabs(subject){
-  const wrap = document.createElement('div');
-  wrap.className='subtabs';
-  for(const k of SUBPAGES){
-    const btn = document.createElement('button');
-    btn.className = 'subtab' + (currentSub===k ? ' active':'');
-    btn.textContent = state.cnOn ? SUBPAGE_LABELS[k].zh : SUBPAGE_LABELS[k].en;
-    btn.onclick = () => {
-      currentSub = k;
-      state.currentSub = k;
-      saveState(state);
-      render();
-    };
-    wrap.appendChild(btn);
-  }
-  return wrap;
-}
-
-function kwWrap(text, subject){
-  // wrap known keywords as clickable spans
-  const words = CACHE.words[subject] || [];
-  const lemmas = new Set(words.map(w=>String(w.lemma||'').toLowerCase()).filter(Boolean));
-  // also include some common unit tokens
-  const extra = ['km','m','cm','mm','g','kg','ml','l','<','>','=','total','left','remaining','difference'];
-  extra.forEach(x=>lemmas.add(x));
-  // tokenize by word boundaries while keeping punctuation
-  return text.replace(/\b([A-Za-z]+|km|cm|mm|kg|ml|km|m)\b/g, (m)=>{
-    const l = m.toLowerCase();
-    if(lemmas.has(l)){
-      return `<span class="kw" data-lemma="${encodeURIComponent(m)}">${m}</span>`;
-    }
-    return m;
-  });
-}
-
-function attachKwHandlers(container, subject){
-  container.querySelectorAll('.kw').forEach(el=>{
-    el.addEventListener('click', ()=>{
-      const lemma = decodeURIComponent(el.getAttribute('data-lemma'));
-      openWordDialog(subject, lemma);
-    });
-  });
-}
-
-function openWordDialog(subject, lemma){
-  // try subject word first, then fallback to math/science common
-  let w = findWord(subject, lemma);
-  if(!w){
-    for(const s of ['math','science','english','social_studies','chinese']){
-      if(CACHE.words[s]){
-        w = findWord(s, lemma);
-        if(w){ subject = s; break; }
-      }
-    }
-  }
-  const dlg = document.getElementById('wordDialog');
-  const title = document.getElementById('wdTitle');
-  const pos = document.getElementById('wdPos');
-  const body = document.getElementById('wdBody');
-  const addBtn = document.getElementById('addWordBtn');
-
-  if(!w){
-    title.textContent = lemma;
-    pos.textContent = state.cnOn ? '未在词库中找到（可后续补充）' : 'Not found in word list (can add later)';
-    body.innerHTML = `<div class="muted">${state.cnOn?'建议：把这个词加入预制词库 JSON':'Tip: add this word to the JSON word list'}</div>`;
-    addBtn.onclick = () => {
-      const id = 'custom_' + lemma.toLowerCase();
-      state.wordbank[id] = { lemma, subject, addedAt: Date.now(), mastery: 0 };
-      saveState(state);
-      toast(state.cnOn?'已加入生词本':'Added to Word Bank');
-      dlg.close();
-    };
-    dlg.showModal();
-    return;
-  }
-
-  title.textContent = `${w.lemma}`;
-  pos.textContent = `${w.pos || ''}  •  ${subject.toUpperCase()}`;
-  const ex = (w.examples||[]).slice(0,3).map(e=>`<li>${e.en}${state.cnOn?`<div class="muted">${e.zh||''}</div>`:''}</li>`).join('');
-  const coll = (w.collocations||[]).slice(0,6).map(c=>`<span class="pill">${c}</span>`).join(' ');
-  const syn = (w.synonyms||[]).slice(0,8).map(s=>`<span class="pill">${s}</span>`).join(' ');
-  body.innerHTML = `
-    <div><span class="pill">${state.cnOn ? (w.zh||'') : (w.en_simple||'')}</span></div>
-    ${state.cnOn ? `<div style="margin-top:8px">${w.en_simple||''}</div>` : (w.zh?`<div style="margin-top:8px" class="muted">${w.zh}</div>`:'')}
-    ${coll?`<div class="hr"></div><div class="muted">${state.cnOn?'常见搭配':'Collocations'}</div><div style="margin-top:6px">${coll}</div>`:''}
-    ${syn?`<div class="hr"></div><div class="muted">${state.cnOn?'同义词/近义表达':'Synonyms'}</div><div style="margin-top:6px">${syn}</div>`:''}
-    ${ex?`<div class="hr"></div><div class="muted">${state.cnOn?'例句':'Examples'}</div><ol style="margin:8px 0 0 18px">${ex}</ol>`:''}
-  `;
-
-  const wid = w.id || ('word_' + w.lemma.toLowerCase());
-  addBtn.onclick = () => {
-    state.wordbank[wid] = { lemma: w.lemma, subject, addedAt: Date.now(), mastery: state.wordbank[wid]?.mastery || 0 };
-    saveState(state);
-    toast(state.cnOn?'已加入生词本':'Added to Word Bank');
-    dlg.close();
-    render(); // update counts if needed
+  const state = {
+    tab: "science",
+    subtab: "read", // read | quiz | bank (subjects)
+    showCN: localStorage.getItem("showCN") !== "0",
+    theme: localStorage.getItem("theme") || "light", // light/dark
+    fs: parseInt(localStorage.getItem("fs") || "18", 10),
+    idx: {}, // current card index per subject
+    datasets: {}, // key -> {instructions, words, wordIndex, phraseIndex}
+    quiz: null, // {subject, q, opts, ans, n, score}
+    dict: { q: "", res: null, loading: false, err: "" }
   };
 
-  dlg.showModal();
-}
+  // ---------- Theme & font ----------
+  function applyTheme() {
+    document.body.classList.toggle("theme-dark", state.theme === "dark");
+    document.documentElement.style.setProperty("--fs", `${state.fs}px`);
+    $("#themeBtn").textContent = state.theme === "dark" ? "主题：夜间" : "主题：护眼绿";
+    $("#toggleCN").textContent = state.showCN ? "中文：开" : "中文：关";
+  }
 
-function renderHome(){
-  const wrap = document.createElement('div');
-  wrap.className='grid2';
-  const left = document.createElement('div');
-  const right = document.createElement('div');
+  $("#toggleCN").onclick = () => {
+    state.showCN = !state.showCN;
+    localStorage.setItem("showCN", state.showCN ? "1" : "0");
+    render();
+  };
+  $("#themeBtn").onclick = () => {
+    state.theme = state.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", state.theme);
+    applyTheme();
+  };
+  $("#fontPlus").onclick = () => {
+    state.fs = Math.min(26, state.fs + 1);
+    localStorage.setItem("fs", String(state.fs));
+    applyTheme();
+  };
+  $("#fontMinus").onclick = () => {
+    state.fs = Math.max(15, state.fs - 1);
+    localStorage.setItem("fs", String(state.fs));
+    applyTheme();
+  };
 
-  left.className='panel';
-  left.innerHTML = `<h2>${state.cnOn?'今日训练':'Today'}</h2>
-    <div class="muted">${state.cnOn?'建议：每天每科 5~10 张读题卡 + 5 个生词复习。':'Tip: 5–10 instruction cards per subject + 5 word reviews daily.'}</div>
-    <div class="hr"></div>
-    <div class="row">
-      <button class="btn primary" id="goQuiz">${state.cnOn?'开始测验':'Start Quiz'}</button>
-      <button class="btn" id="goWB">${state.cnOn?'复习生词':'Review Word Bank'}</button>
-    </div>
-  `;
+  // ---------- Speech (UK) + audio fallback ----------
+  function speakUK(text) {
+    const t = (text || "").trim();
+    if (!t) return;
 
-  right.className='panel';
-  const wbCount = Object.keys(state.wordbank||{}).length;
-  right.innerHTML = `<h2>${state.cnOn?'快速概览':'Quick stats'}</h2>
-    <div class="kpi">
-      <div class="panel"><div class="muted">${state.cnOn?'生词本':'Word Bank'}</div><div class="score">${wbCount}</div></div>
-      <div class="panel"><div class="muted">${state.cnOn?'最近薄弱标签':'Weak tags (14d)'}</div><div id="weakTags" class="muted">—</div></div>
-    </div>
-  `;
+    // Try cached audio URL from dictionary cache
+    try {
+      const cache = JSON.parse(localStorage.getItem("dictCache") || "{}");
+      const hit = cache[t.toLowerCase()];
+      const audioUrl = hit && hit.audio_gb;
+      if (audioUrl) {
+        const a = new Audio(audioUrl);
+        a.play().catch(() => {});
+        return;
+      }
+    } catch (_) {}
 
-  wrap.appendChild(left); wrap.appendChild(right);
+    // Fallback to Web Speech API
+    try {
+      if (!("speechSynthesis" in window)) return;
+      const u = new SpeechSynthesisUtterance(t);
+      u.lang = "en-GB";
+      const pick = () => {
+        const voices = speechSynthesis.getVoices() || [];
+        const v =
+          voices.find((v) => /en-GB/i.test(v.lang)) ||
+          voices.find((v) => /English \(United Kingdom\)/i.test(v.name)) ||
+          voices.find((v) => /^en/i.test(v.lang));
+        if (v) u.voice = v;
+        speechSynthesis.cancel();
+        speechSynthesis.speak(u);
+      };
+      if ((speechSynthesis.getVoices() || []).length === 0) {
+        speechSynthesis.onvoiceschanged = pick;
+        setTimeout(pick, 200);
+      } else pick();
+    } catch (_) {}
+  }
 
-  setTimeout(()=>{
-    document.getElementById('goQuiz').onclick = ()=>{ currentTab='quiz'; state.currentTab='quiz'; saveState(state); render(); };
-    document.getElementById('goWB').onclick = ()=>{ currentTab='wordbank'; state.currentTab='wordbank'; saveState(state); render(); };
-    // compute weak tags overall
-    const tagScores = [];
-    for(const s of Object.keys(state.stats||{})){
-      const ts = state.stats[s]?.tagStats || {};
-      for(const [tag, v] of Object.entries(ts)){
-        const seen = v.seen||0, wrong=v.wrong||0;
-        if(seen>=3){
-          tagScores.push({s, tag, rate: wrong/seen});
+  // ---------- Data loading ----------
+  async function loadSubject(key) {
+    if (state.datasets[key]) return state.datasets[key];
+
+    const base = `data/${key}`;
+    const [instructions, words] = await Promise.all([
+      fetch(`${base}/instructions.json`).then((r) => (r.ok ? r.json() : [])),
+      fetch(`${base}/words.json`).then((r) => (r.ok ? r.json() : []))
+    ]);
+
+    const wordIndex = {};
+    const phraseList = [];
+    for (const w of words || []) {
+      if (!w || !w.term) continue;
+      const t = w.term.trim().toLowerCase();
+      wordIndex[t] = w;
+      phraseList.push(t);
+      if (Array.isArray(w.collocations)) {
+        for (const c of w.collocations) {
+          if (c && typeof c === "string") phraseList.push(c.trim().toLowerCase());
         }
       }
     }
-    tagScores.sort((a,b)=>b.rate-a.rate);
-    const top = tagScores.slice(0,6).map(x=>`${x.tag} (${Math.round(x.rate*100)}%)`).join(' • ');
-    const el = document.getElementById('weakTags');
-    if(el) el.textContent = top || '—';
-  }, 0);
+    // unique phrases, longest-first
+    const uniq = Array.from(new Set(phraseList)).filter((p) => p.split(/\s+/).length >= 2);
+    uniq.sort((a, b) => b.length - a.length);
+    const phraseIndex = uniq;
 
-  return wrap;
-}
-
-function renderSubject(subject){
-  const wrap = document.createElement('div');
-  wrap.appendChild(renderSubtabs(subject));
-
-  if(currentSub==='learn') wrap.appendChild(renderLearn(subject));
-  if(currentSub==='drills') wrap.appendChild(renderDrills(subject));
-  if(currentSub==='words') wrap.appendChild(renderWords(subject));
-
-  return wrap;
-}
-
-function getLearnIdx(subject){
-  currentLearnIndex[subject] = currentLearnIndex[subject] || 0;
-  return currentLearnIndex[subject];
-}
-function setLearnIdx(subject, idx){
-  currentLearnIndex[subject]=idx;
-  state.currentLearnIndex = currentLearnIndex;
-  saveState(state);
-}
-
-function renderLearn(subject){
-  const inst = CACHE.instructions[subject] || [];
-  const idx = Math.min(getLearnIdx(subject), Math.max(inst.length-1,0));
-  const card = inst[idx];
-
-  const el = document.createElement('div');
-  el.className='card';
-  if(!card){
-    el.innerHTML = `<div class="muted">${state.cnOn?'该学科暂无内容（检查 data JSON）':'No content (check data JSON)'}</div>`;
-    return el;
+    state.datasets[key] = { instructions, words, wordIndex, phraseIndex };
+    if (state.idx[key] == null) state.idx[key] = 0;
+    return state.datasets[key];
   }
 
-  const en = kwWrap(card.text_en, subject);
-  const zh = card.text_zh || '';
-  const cnBlock = state.cnOn ? `<div style="margin-top:10px" class="muted">${zh}</div>` : '';
-  const tags = (card.tags||[]).slice(0,6).map(t=>`<span class="pill">${t}</span>`).join(' ');
-  el.innerHTML = `
-    <div class="row" style="justify-content:space-between; align-items:center;">
-      <div class="pill">${subject.toUpperCase()} • ${card.topic || 'general'}</div>
-      <div class="muted">#${idx+1}/${inst.length}</div>
-    </div>
-    <div style="margin-top:10px; font-size:18px; line-height:1.45">${en}</div>
-    ${cnBlock}
-    <div style="margin-top:10px">${tags}</div>
+  async function preloadCore() {
+    // load math+science first (MVP requirement)
+    await Promise.all(["math", "science"].map(loadSubject));
+    applyTheme();
+    render();
+  }
 
-    <div class="hr"></div>
-    <div class="muted">${state.cnOn?'1) 这题要你做什么？':'1) What to do?'}</div>
-    <div class="choices" id="q1"></div>
+  // ---------- Glossary dialog ----------
+  const dlg = $("#glossDlg");
+  const dlgTerm = $("#dlgTerm");
+  const dlgPhon = $("#dlgPhon");
+  const dlgZh = $("#dlgZh");
+  const dlgDef = $("#dlgDef");
 
-    <div class="muted" style="margin-top:10px">${state.cnOn?'2) 你需要抓哪些信息？':'2) What to notice?'}</div>
-    <div class="choices" id="q2"></div>
+  $("#dlgClose").onclick = () => dlg.close();
+  $("#dlgSpeak").onclick = () => speakUK(dlgTerm.textContent);
+  $("#dlgAdd").onclick = () => {
+    const term = dlgTerm.textContent.trim();
+    if (!term) return;
+    addToWordbook(term, dlgZh.textContent || "");
+    renderWordbookToast(term);
+  };
 
-    <div class="muted" style="margin-top:10px">${state.cnOn?'3) 最终要输出什么格式？':'3) What to write?'}</div>
-    <div class="choices" id="q3"></div>
+  function openGloss(term, localHit) {
+    dlgTerm.textContent = term;
+    dlgPhon.textContent = "";
+    dlgZh.textContent = localHit?.zh || "";
+    dlgDef.textContent = localHit?.hint || "";
 
-    <div class="hr"></div>
-    <div class="row">
-      <button class="btn" id="prevBtn">← ${state.cnOn?'上一张':'Prev'}</button>
-      <button class="btn primary" id="checkBtn">${state.cnOn?'提交并评分':'Check'}</button>
-      <button class="btn" id="nextBtn">${state.cnOn?'下一张':'Next'} →</button>
-    </div>
-    <div id="result" style="margin-top:10px"></div>
-  `;
+    // Try to enrich with online dict (non-blocking)
+    lookupDictionary(term).then((res) => {
+      if (!res) return;
+      // only update if still the same term open
+      if (dlgTerm.textContent.trim().toLowerCase() !== term.toLowerCase()) return;
+      if (res.phonetic) dlgPhon.textContent = res.phonetic;
+      if (!dlgZh.textContent && res.zh) dlgZh.textContent = res.zh;
+      if (res.definition) dlgDef.textContent = res.definition;
+    });
 
-  setTimeout(()=>{
-    attachKwHandlers(el, subject);
+    dlg.showModal();
+  }
 
-    // render choices
-    const q1 = el.querySelector('#q1');
-    const q2 = el.querySelector('#q2');
-    const q3 = el.querySelector('#q3');
+  // ---------- Clickable text (all words + known phrases) ----------
+  function escapeHTML(s) {
+    return String(s)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;");
+  }
 
-    const correct1 = new Set(card.quiz?.task_types || []);
-    const correct2 = new Set(card.quiz?.notice || []);
-    const correct3 = card.quiz?.output || '';
+  function wrapTextWithClicks(text, ds) {
+    const raw = String(text || "");
+    if (!raw) return "";
 
-    // Provide plausible options (including correct)
-    const bank1 = (CACHE.patterns[subject]?.task_types || []).slice();
-    const bank2 = (CACHE.patterns[subject]?.notice || []).slice();
-    const bank3 = (CACHE.patterns[subject]?.outputs || []).slice();
-
-    function sampleWithCorrect(bank, correctSet, n){
-      const opts = new Set([...correctSet]);
-      while(opts.size < Math.min(n, bank.length)){
-        opts.add(bank[Math.floor(Math.random()*bank.length)]);
+    // greedy phrase replacement (case-insensitive)
+    let tmp = raw;
+    const markers = [];
+    if (ds?.phraseIndex?.length) {
+      for (const ph of ds.phraseIndex.slice(0, 500)) { // cap to keep fast
+        const re = new RegExp(`\\b${ph.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "ig");
+        tmp = tmp.replace(re, (m) => {
+          const id = `__PH_${markers.length}__`;
+          markers.push({ id, text: m });
+          return id;
+        });
       }
-      return [...opts];
-    }
-    function sampleOneWithCorrect(bank, correctVal, n){
-      const opts = new Set([correctVal]);
-      while(opts.size < Math.min(n, bank.length)){
-        opts.add(bank[Math.floor(Math.random()*bank.length)]);
-      }
-      return [...opts];
     }
 
-    const opts1 = sampleWithCorrect(bank1, correct1, 6);
-    const opts2 = sampleWithCorrect(bank2, correct2, 6);
-    const opts3 = sampleOneWithCorrect(bank3, correct3, 5);
-
-    let sel1 = new Set();
-    let sel2 = new Set();
-    let sel3 = '';
-
-    // q1 can be multi-select (some cards have multiple)
-    opts1.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject, 'task', o);
-      chip.onclick = ()=>{
-        if(sel1.has(o)) sel1.delete(o); else sel1.add(o);
-        chip.classList.toggle('sel');
-      };
-      q1.appendChild(chip);
+    // wrap single words
+    tmp = tmp.replace(/[A-Za-z][A-Za-z']*/g, (m) => {
+      return `<span class="kw" data-term="${escapeHTML(m)}">${escapeHTML(m)}</span>`;
     });
 
-    // q2 multi-select
-    opts2.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject, 'notice', o);
-      chip.onclick = ()=>{
-        if(sel2.has(o)) sel2.delete(o); else sel2.add(o);
-        chip.classList.toggle('sel');
-      };
-      q2.appendChild(chip);
-    });
+    // restore phrases and wrap as one clickable unit
+    for (const mk of markers) {
+      const safe = escapeHTML(mk.text);
+      tmp = tmp.replaceAll(
+        mk.id,
+        `<span class="kw" data-term="${safe}" data-phrase="1">${safe}</span>`
+      );
+    }
 
-    // q3 single select
-    opts3.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject, 'output', o);
-      chip.onclick = ()=>{
-        sel3 = o;
-        [...q3.children].forEach(c=>c.classList.remove('sel'));
-        chip.classList.add('sel');
-      };
-      q3.appendChild(chip);
-    });
-
-    el.querySelector('#prevBtn').onclick = ()=>{
-      setLearnIdx(subject, Math.max(0, idx-1));
-      render();
-    };
-    el.querySelector('#nextBtn').onclick = ()=>{
-      setLearnIdx(subject, Math.min(inst.length-1, idx+1));
-      render();
-    };
-
-    el.querySelector('#checkBtn').onclick = ()=>{
-      let score = 0;
-      const ok1 = setEq(sel1, correct1);
-      const ok2 = setEq(sel2, correct2);
-      const ok3 = (sel3 === correct3 && sel3 !== '');
-
-      if(ok1) score += 1;
-      if(ok2) score += 1;
-      if(ok3) score += 1;
-
-      const correct = (score === 3);
-      bumpTag(subject, card.tags, correct);
-
-      const res = el.querySelector('#result');
-      res.innerHTML = `
-        <div class="panel">
-          <div class="row" style="justify-content:space-between; align-items:center;">
-            <div class="score">${score}/3</div>
-            <div class="pill">${correct ? (state.cnOn?'正确':'Correct') : (state.cnOn?'需要加强':'Needs work')}</div>
-          </div>
-          <div class="muted" style="margin-top:6px">${state.cnOn?'正确答案：':'Answer key:'}</div>
-          <div style="margin-top:6px">
-            <div><span class="muted">1)</span> ${[...correct1].map(x=>labelFor(subject,'task',x)).join(', ')}</div>
-            <div><span class="muted">2)</span> ${[...correct2].map(x=>labelFor(subject,'notice',x)).join(', ')}</div>
-            <div><span class="muted">3)</span> ${labelFor(subject,'output',correct3)}</div>
-          </div>
-        </div>
-      `;
-      toast(correct ? (state.cnOn?'很好！':'Nice!') : (state.cnOn?'记录薄弱点':'Saved as weak point'));
-    };
-  },0);
-
-  return el;
-}
-
-function labelFor(subject, kind, key){
-  const map = CACHE.patterns[subject]?.labels || {};
-  const k = `${kind}:${key}`;
-  if(state.cnOn){
-    return (map[k]?.zh) || key;
-  }
-  return (map[k]?.en) || key;
-}
-
-function setEq(a, b){
-  if(a.size !== b.size) return false;
-  for(const x of a) if(!b.has(x)) return false;
-  return true;
-}
-
-function renderDrills(subject){
-  const inst = CACHE.instructions[subject] || [];
-  const el = document.createElement('div');
-  el.className='card';
-
-  // Create quick drill: show 8 random instruction lines, pick task type only (fast)
-  const n = Math.min(8, inst.length);
-  const picks = [];
-  const used = new Set();
-  while(picks.length<n){
-    const i = Math.floor(Math.random()*inst.length);
-    if(!used.has(i)){ used.add(i); picks.push(inst[i]); }
+    return tmp;
   }
 
-  el.innerHTML = `
-    <div class="row" style="justify-content:space-between; align-items:center;">
-      <div class="pill">${state.cnOn?'快练：只选“任务类型”':'Drills: choose task type'}</div>
-      <button class="btn small" id="regen">${state.cnOn?'换一批':'Refresh'}</button>
-    </div>
-    <div class="hr"></div>
-    <div id="drillList"></div>
-  `;
+  // ---------- Wordbook (localStorage) ----------
+  function getWordbook() {
+    try {
+      return JSON.parse(localStorage.getItem("wordbook") || "[]");
+    } catch (_) {
+      return [];
+    }
+  }
+  function saveWordbook(list) {
+    localStorage.setItem("wordbook", JSON.stringify(list.slice(0, 2000)));
+  }
+  function addToWordbook(term, zh) {
+    const t = term.trim();
+    if (!t) return;
+    const list = getWordbook();
+    const key = t.toLowerCase();
+    const hit = list.find((x) => x.key === key);
+    if (hit) {
+      hit.zh = hit.zh || zh || "";
+      hit.addedAt = hit.addedAt || Date.now();
+      hit.seen = (hit.seen || 0) + 1;
+    } else {
+      list.unshift({ key, term: t, zh: zh || "", addedAt: Date.now(), seen: 1 });
+    }
+    saveWordbook(list);
+  }
+  function renderWordbookToast(term){
+    // minimal feedback without extra UI dependencies
+    try{ navigator.vibrate?.(20); }catch(_){}
+    // quick flash in title
+    const b = document.title;
+    document.title = `✅ 已加入：${term}`;
+    setTimeout(()=>{ document.title = b; }, 700);
+  }
 
-  setTimeout(()=>{
-    el.querySelector('#regen').onclick = ()=>render();
-    const list = el.querySelector('#drillList');
-    const bank1 = (CACHE.patterns[subject]?.task_types || []);
-    picks.forEach((c, idx)=>{
-      const row = document.createElement('div');
-      row.className='panel';
-      row.style.marginBottom='10px';
-      const en = kwWrap(c.text_en, subject);
-      row.innerHTML = `
-        <div class="muted">#${idx+1}</div>
-        <div style="margin-top:6px; font-size:16px; line-height:1.4">${en}</div>
-        ${state.cnOn ? `<div class="muted" style="margin-top:6px">${c.text_zh||''}</div>` : ''}
-        <div class="choices" style="margin-top:10px"></div>
-        <div class="muted" style="margin-top:8px" id="r${idx}"></div>
-      `;
-      list.appendChild(row);
-      attachKwHandlers(row, subject);
+  // ---------- Online dictionary (client-side API) ----------
+  async function lookupDictionary(term) {
+    const t = term.trim().toLowerCase();
+    if (!t) return null;
 
-      const correct = new Set(c.quiz?.task_types || []);
-      const opts = new Set([...correct]);
-      while(opts.size < Math.min(5, bank1.length)){
-        opts.add(bank1[Math.floor(Math.random()*bank1.length)]);
+    // in-memory / local cache
+    let cache = {};
+    try { cache = JSON.parse(localStorage.getItem("dictCache") || "{}"); } catch (_) {}
+    if (cache[t]?.ts && Date.now() - cache[t].ts < 1000 * 60 * 60 * 24 * 14) {
+      return cache[t];
+    }
+
+    const out = { ts: Date.now(), term: term, phonetic: "", definition: "", zh: "", audio_gb: "" };
+
+    // 1) English dictionary (free)
+    try {
+      const r = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(t)}`);
+      if (r.ok) {
+        const j = await r.json();
+        const first = Array.isArray(j) ? j[0] : null;
+        if (first) {
+          out.phonetic = first.phonetic || "";
+          // pick audio; prefer "gb" if possible
+          const phs = Array.isArray(first.phonetics) ? first.phonetics : [];
+          const audios = phs.map(p => p?.audio).filter(Boolean);
+          out.audio_gb = audios.find(a => /uk|gb/i.test(a)) || audios[0] || "";
+          const mean = Array.isArray(first.meanings) ? first.meanings[0] : null;
+          const def = mean?.definitions?.[0]?.definition || "";
+          out.definition = def;
+        }
       }
-      const choices = row.querySelector('.choices');
-      [...opts].forEach(o=>{
-        const chip = document.createElement('div');
-        chip.className='chip';
-        chip.textContent = labelFor(subject,'task',o);
-        chip.onclick = ()=>{
-          const ok = (correct.size===1 && correct.has(o));
-          chip.classList.add('sel');
-          // lock
-          [...choices.children].forEach(ch=>ch.style.pointerEvents='none');
-          bumpTag(subject, c.tags, ok);
-          row.querySelector(`#r${idx}`).textContent = ok ? (state.cnOn?'✅ 正确':'✅ Correct') : (state.cnOn?'❌ 正确是：':'❌ Correct: ') + [...correct].map(x=>labelFor(subject,'task',x)).join(', ');
-        };
-        choices.appendChild(chip);
+    } catch (_) {}
+
+    // 2) Chinese translation (free-ish) via MyMemory (best-effort)
+    // Note: public endpoint has rate limits; we cache results.
+    try {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(term)}&langpair=en|zh-CN`;
+      const r = await fetch(url);
+      if (r.ok) {
+        const j = await r.json();
+        const tr = j?.responseData?.translatedText;
+        if (tr && typeof tr === "string") out.zh = tr;
+      }
+    } catch (_) {}
+
+    cache[t] = out;
+    try { localStorage.setItem("dictCache", JSON.stringify(cache)); } catch (_) {}
+    return out;
+  }
+
+  // ---------- Quiz (per subject) ----------
+  function startQuiz(subjectKey, ds) {
+    // question: show EN instruction -> pick correct CN translation among 4
+    const pool = (ds.instructions || []).filter(x => x?.en && x?.zh);
+    if (pool.length < 4) return null;
+    const q = pool[Math.floor(Math.random() * pool.length)];
+    const opts = [q.zh];
+    while (opts.length < 4) {
+      const c = pool[Math.floor(Math.random() * pool.length)].zh;
+      if (!opts.includes(c)) opts.push(c);
+    }
+    // shuffle
+    for (let i = opts.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [opts[i], opts[j]] = [opts[j], opts[i]];
+    }
+    state.quiz = {
+      subject: subjectKey,
+      q,
+      opts,
+      ans: q.zh,
+      n: (state.quiz?.n || 0) + 1,
+      score: state.quiz?.score || 0,
+      chosen: null
+    };
+  }
+
+  function pickQuiz(opt) {
+    if (!state.quiz || state.quiz.chosen) return;
+    state.quiz.chosen = opt;
+    if (opt === state.quiz.ans) state.quiz.score += 1;
+    render();
+  }
+
+  // ---------- Rendering ----------
+  function renderTabs() {
+    const tabs = $("#tabs");
+    tabs.innerHTML = "";
+    SUBJECTS.forEach((t) => {
+      const el = document.createElement("div");
+      el.className = "tab" + (state.tab === t.key ? " active" : "");
+      el.textContent = `${t.zh} / ${t.en}`;
+      el.onclick = () => {
+        state.tab = t.key;
+        state.subtab = (t.key === "dictionary" || t.key === "wordbook" || t.key === "progress") ? "main" : "read";
+        if (t.key !== "dictionary") state.dict.err = "";
+        render();
+      };
+      tabs.appendChild(el);
+    });
+  }
+
+  function renderMain() {
+    const main = $("#main");
+    main.innerHTML = "";
+
+    // dictionary / wordbook / progress special pages
+    if (state.tab === "dictionary") return renderDictionary(main);
+    if (state.tab === "wordbook") return renderWordbook(main);
+    if (state.tab === "progress") return renderProgress(main);
+
+    // subject tabs
+    renderSubject(main, state.tab);
+  }
+
+  function panelHeader(titleLeft, rightEl) {
+    const h = document.createElement("div");
+    h.className = "panel-h";
+    const left = document.createElement("div");
+    left.className = "left";
+    left.appendChild(titleLeft);
+    const right = document.createElement("div");
+    if (rightEl) right.appendChild(rightEl);
+    h.appendChild(left);
+    h.appendChild(right);
+    return h;
+  }
+
+  async function renderSubject(main, key) {
+    const ds = await loadSubject(key);
+
+    const title = document.createElement("div");
+    title.className = "badge";
+    const count = ds.instructions?.length || 0;
+    title.textContent = `${key.toUpperCase()} · ${count} instruction cards`;
+
+    const subtabs = document.createElement("div");
+    subtabs.className = "subtabs";
+    const mkSub = (id, zh, en) => {
+      const b = document.createElement("div");
+      b.className = "tab" + (state.subtab === id ? " active" : "");
+      b.textContent = `${zh} / ${en}`;
+      b.onclick = () => { state.subtab = id; render(); };
+      return b;
+    };
+    subtabs.appendChild(mkSub("read", "读题", "Read"));
+    subtabs.appendChild(mkSub("quiz", "测验", "Quiz"));
+    subtabs.appendChild(mkSub("bank", "词库", "Word Bank"));
+
+    const leftWrap = document.createElement("div");
+    leftWrap.appendChild(title);
+    leftWrap.appendChild(subtabs);
+
+    main.appendChild(panelHeader(leftWrap, null));
+
+    const content = document.createElement("div");
+    content.className = "content";
+    main.appendChild(content);
+
+    if (state.subtab === "read") return renderRead(content, key, ds);
+    if (state.subtab === "quiz") return renderQuiz(content, key, ds);
+    return renderBank(content, key, ds);
+  }
+
+  function bindKwClicks(scopeEl, ds) {
+    scopeEl.querySelectorAll(".kw").forEach((el) => {
+      el.onclick = (e) => {
+        const term = el.getAttribute("data-term") || "";
+        const t = term.trim();
+        const hit =
+          ds.wordIndex?.[t.toLowerCase()] ||
+          ds.wordIndex?.[t.toLowerCase().replace(/'s$/,"")] ||
+          null;
+        // Add to wordbook on shift-click
+        if (e.shiftKey) addToWordbook(t, hit?.zh || "");
+        openGloss(t, hit);
+      };
+    });
+  }
+
+  function renderRead(host, key, ds) {
+    const idx = Math.max(0, Math.min(ds.instructions.length - 1, state.idx[key] || 0));
+    state.idx[key] = idx;
+    const item = ds.instructions[idx] || { en: "", zh: "" };
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const en = document.createElement("div");
+    en.className = "en";
+    en.innerHTML = wrapTextWithClicks(item.en, ds);
+    card.appendChild(en);
+
+    if (state.showCN && item.zh) {
+      const cn = document.createElement("div");
+      cn.className = "cn";
+      cn.textContent = item.zh;
+      card.appendChild(cn);
+    }
+
+    const chips = document.createElement("div");
+    chips.className = "chips";
+    const meta = document.createElement("span");
+    meta.className = "chip";
+    meta.textContent = `#${idx + 1}/${ds.instructions.length}`;
+    chips.appendChild(meta);
+    if (item.topic) {
+      const c = document.createElement("span");
+      c.className = "chip";
+      c.textContent = item.topic;
+      chips.appendChild(c);
+    }
+    card.appendChild(chips);
+
+    const row = document.createElement("div");
+    row.className = "row";
+    const prev = document.createElement("button");
+    prev.textContent = "← 上一张";
+    prev.onclick = () => { state.idx[key] = Math.max(0, idx - 1); render(); };
+    const next = document.createElement("button");
+    next.textContent = "下一张 →";
+    next.onclick = () => { state.idx[key] = Math.min(ds.instructions.length - 1, idx + 1); render(); };
+    const rand = document.createElement("button");
+    rand.className = "primary";
+    rand.textContent = "随机一张";
+    rand.onclick = () => { state.idx[key] = Math.floor(Math.random() * ds.instructions.length); render(); };
+    const speak = document.createElement("button");
+    speak.textContent = "🔊 读整句";
+    speak.onclick = () => speakUK(item.en);
+
+    const hint = document.createElement("div");
+    hint.className = "hint";
+    hint.textContent = "提示：点任何单词/短语可查词；Shift+点击可快速加入生词本。";
+
+    row.appendChild(prev);
+    row.appendChild(next);
+    row.appendChild(rand);
+    row.appendChild(speak);
+    row.appendChild(document.createElement("div")).className="spacer";
+    host.appendChild(card);
+    host.appendChild(row);
+    host.appendChild(hint);
+
+    bindKwClicks(card, ds);
+  }
+
+  function renderQuiz(host, key, ds) {
+    if (!state.quiz || state.quiz.subject !== key) startQuiz(key, ds);
+
+    const q = state.quiz;
+    if (!q) {
+      host.innerHTML = `<div class="hint">该科目的题库不足以生成测验。</div>`;
+      return;
+    }
+
+    const wrap = document.createElement("div");
+    wrap.className = "grid2";
+
+    const left = document.createElement("div");
+    left.className = "card";
+    const title = document.createElement("div");
+    title.className = "badge";
+    title.textContent = `测验 · 第 ${q.n} 题 · 得分 ${q.score}/${q.n - (q.chosen ? 0 : 1)}`;
+    left.appendChild(title);
+
+    const en = document.createElement("div");
+    en.className = "en";
+    en.style.marginTop = "10px";
+    en.innerHTML = wrapTextWithClicks(q.q.en, ds);
+    left.appendChild(en);
+
+    const hint = document.createElement("div");
+    hint.className = "hint";
+    hint.style.marginTop = "8px";
+    hint.textContent = "选出最正确的中文意思（理解题目在问什么）。";
+    left.appendChild(hint);
+
+    q.opts.forEach((opt) => {
+      const b = document.createElement("button");
+      b.className = "quiz-opt";
+      b.textContent = opt;
+      b.onclick = () => pickQuiz(opt);
+      if (q.chosen) {
+        if (opt === q.ans) b.classList.add("good");
+        else if (opt === q.chosen) b.classList.add("bad");
+      }
+      left.appendChild(b);
+    });
+
+    const row = document.createElement("div");
+    row.className = "row";
+    const next = document.createElement("button");
+    next.className = "primary";
+    next.textContent = q.chosen ? "下一题 →" : "跳过 →";
+    next.onclick = () => { startQuiz(key, ds); render(); };
+    const addAll = document.createElement("button");
+    addAll.textContent = "把这句里的生词加入单词本";
+    addAll.onclick = () => {
+      // add words not in local wordIndex will still be added (term only)
+      const words = (q.q.en.match(/[A-Za-z][A-Za-z']*/g) || []);
+      words.slice(0, 30).forEach(w => addToWordbook(w, ds.wordIndex?.[w.toLowerCase()]?.zh || ""));
+      renderWordbookToast("已加入");
+    };
+    row.appendChild(next);
+    row.appendChild(addAll);
+    left.appendChild(row);
+
+    bindKwClicks(left, ds);
+
+    const right = document.createElement("div");
+    right.className = "card";
+    right.innerHTML = `
+      <div class="badge">如何用</div>
+      <div style="margin-top:10px">
+        <div>✅ 目标：Jayden 看到题目能读懂“要做什么”。</div>
+        <div class="small" style="margin-top:8px">建议：每天 5–10 题；错的会自然重复出现（因为随机抽）。</div>
+      </div>
+    `;
+
+    wrap.appendChild(left);
+    wrap.appendChild(right);
+    host.appendChild(wrap);
+  }
+
+  function renderBank(host, key, ds) {
+    const card = document.createElement("div");
+    card.className = "card";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "搜索词库 / Search word bank (e.g. classify, measure, kilometre)";
+    card.appendChild(input);
+
+    const list = document.createElement("div");
+    list.className = "list";
+    card.appendChild(list);
+
+    function draw(q) {
+      list.innerHTML = "";
+      const query = (q || "").trim().toLowerCase();
+      const items = (ds.words || []).filter((w) => {
+        if (!query) return true;
+        return (w.term || "").toLowerCase().includes(query) || (w.zh || "").includes(query);
+      }).slice(0, 200);
+
+      items.forEach((w) => {
+        const it = document.createElement("div");
+        it.className = "item";
+        it.innerHTML = `<div class="k">${escapeHTML(w.term || "")}</div>
+                        <div class="z">${escapeHTML(w.zh || "")}</div>
+                        <div class="small" style="margin-top:6px">${escapeHTML(w.hint || "")}</div>`;
+        it.onclick = () => openGloss(w.term || "", w);
+        list.appendChild(it);
       });
-    });
-  },0);
 
-  return el;
-}
+      if (items.length === 0) list.innerHTML = `<div class="hint">没有匹配结果。</div>`;
+    }
 
-function renderWords(subject){
-  const words = CACHE.words[subject] || [];
-  const el = document.createElement('div');
-  el.className='card';
+    input.oninput = () => draw(input.value);
+    draw("");
 
-  el.innerHTML = `
-    <div class="row" style="justify-content:space-between; align-items:center;">
-      <div class="pill">${state.cnOn?'高频词库':'High-frequency words'} • ${words.length}</div>
-      <input id="wsearch" placeholder="${state.cnOn?'搜索英文词…':'Search word…'}" style="max-width:280px" />
-    </div>
-    <div class="hr"></div>
-    <div id="wlist"></div>
-  `;
+    host.appendChild(card);
+  }
 
-  setTimeout(()=>{
-    const list = el.querySelector('#wlist');
-    const input = el.querySelector('#wsearch');
+  function renderDictionary(main) {
+    const title = document.createElement("div");
+    title.className = "badge";
+    title.textContent = "在线词典（输入单词/短语） · Offline-first：断网也能看本地词库 + 已缓存结果";
 
-    function renderList(q=''){
-      list.innerHTML='';
-      const qq = q.trim().toLowerCase();
-      const filtered = qq ? words.filter(w => (w.lemma||'').toLowerCase().includes(qq) || (w.zh||'').includes(q)) : words.slice(0,120);
-      filtered.forEach(w=>{
-        const wid = w.id || ('word_' + w.lemma.toLowerCase());
-        const inWB = !!state.wordbank[wid];
-        const row = document.createElement('div');
-        row.className='panel';
-        row.innerHTML = `
-          <div class="row" style="justify-content:space-between; align-items:center;">
-            <div>
-              <div style="font-weight:700">${w.lemma} <span class="muted" style="font-weight:400">${w.pos||''}</span></div>
-              <div class="muted">${state.cnOn ? (w.zh||'') : (w.en_simple||'')}</div>
-            </div>
-            <button class="btn small ${inWB?'primary':''}">${inWB ? (state.cnOn?'已加入':'Added') : '⭐'}</button>
+    main.appendChild(panelHeader(title, null));
+
+    const content = document.createElement("div");
+    content.className = "content";
+    main.appendChild(content);
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const row = document.createElement("div");
+    row.className = "row";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "输入英文单词或短语 / Enter a word or phrase";
+    input.value = state.dict.q || "";
+    const go = document.createElement("button");
+    go.className = "primary";
+    go.textContent = "查询";
+    const add = document.createElement("button");
+    add.textContent = "加入单词本";
+    add.onclick = () => {
+      if (!state.dict.res?.term && !input.value.trim()) return;
+      const term = (state.dict.res?.term || input.value).trim();
+      addToWordbook(term, state.dict.res?.zh || "");
+      renderWordbookToast(term);
+    };
+
+    row.appendChild(input);
+    row.appendChild(go);
+    row.appendChild(add);
+    card.appendChild(row);
+
+    const out = document.createElement("div");
+    out.style.marginTop = "12px";
+    card.appendChild(out);
+
+    async function runLookup() {
+      const q = input.value.trim();
+      if (!q) return;
+      state.dict.q = q;
+      state.dict.loading = true;
+      state.dict.err = "";
+      out.innerHTML = `<div class="hint">查询中…（需要联网；会自动缓存）</div>`;
+      try {
+        const res = await lookupDictionary(q);
+        state.dict.res = res;
+        state.dict.loading = false;
+
+        out.innerHTML = `
+          <div class="pill"><b>${escapeHTML(res.term || q)}</b> <span class="mono">${escapeHTML(res.phonetic || "")}</span></div>
+          <div style="margin-top:10px;font-weight:750">${escapeHTML(res.zh || "")}</div>
+          <div class="small" style="margin-top:8px">${escapeHTML(res.definition || "")}</div>
+          <div class="row" style="margin-top:12px">
+            <button class="primary" id="dictSpeak">🔊 英式发音</button>
+            <button id="dictOpen">打开释义弹窗</button>
           </div>
         `;
-        row.querySelector('button').onclick = ()=>{
-          state.wordbank[wid] = { lemma: w.lemma, subject, addedAt: Date.now(), mastery: state.wordbank[wid]?.mastery || 0 };
-          saveState(state);
-          toast(state.cnOn?'已加入生词本':'Added to Word Bank');
-          render();
-        };
-        row.onclick = (e)=>{
-          if(e.target.tagName.toLowerCase()==='button') return;
-          openWordDialog(subject, w.lemma);
-        };
-        list.appendChild(row);
-      });
-      if(filtered.length===0){
-        list.innerHTML = `<div class="muted">${state.cnOn?'没有匹配结果':'No matches'}</div>`;
+        out.querySelector("#dictSpeak").onclick = () => speakUK(res.term || q);
+        out.querySelector("#dictOpen").onclick = () => openGloss(res.term || q, null);
+      } catch (e) {
+        state.dict.loading = false;
+        state.dict.err = "查询失败（可能断网或接口限流）。";
+        out.innerHTML = `<div class="hint">${state.dict.err}</div>`;
       }
     }
-    renderList();
-    input.oninput = ()=>renderList(input.value);
-  },0);
 
-  return el;
-}
+    go.onclick = runLookup;
+    input.onkeydown = (e) => { if (e.key === "Enter") runLookup(); };
 
-function renderQuiz(){
-  const el = document.createElement('div');
-  el.className='card';
+    content.appendChild(card);
+  }
 
-  el.innerHTML = `
-    <h2>${state.cnOn?'随机测验（按薄弱权重）':'Weighted Random Quiz'}</h2>
-    <div class="muted">${state.cnOn?'先选学科，再生成题目。每题只测“读懂题意”，不测计算。':'Choose a subject. Each item tests understanding only (not calculation).'} </div>
-    <div class="hr"></div>
+  function renderWordbook(main) {
+    const title = document.createElement("div");
+    title.className = "badge";
+    title.textContent = "生词本（本机离线保存） · 可用于复习";
 
-    <label>${state.cnOn?'学科':'Subject'}</label>
-    <select id="qSub">
-      <option value="math">Math / 数学</option>
-      <option value="science">Science / 科学</option>
-      <option value="english">English / 英语</option>
-      <option value="social_studies">Social Studies / 社会研究</option>
-      <option value="chinese">Chinese / 华文</option>
-    </select>
+    main.appendChild(panelHeader(title, null));
 
-    <label>${state.cnOn?'题量':'Number of items'}</label>
-    <select id="qCount">
-      <option value="5">5</option>
-      <option value="10" selected>10</option>
-      <option value="20">20</option>
-    </select>
+    const content = document.createElement("div");
+    content.className = "content";
+    main.appendChild(content);
 
-    <div class="row" style="margin-top:12px">
-      <button class="btn primary" id="startQuiz">${state.cnOn?'开始':'Start'}</button>
-      <button class="btn" id="resetQuiz">${state.cnOn?'清空本地统计':'Reset stats'}</button>
-    </div>
+    const card = document.createElement("div");
+    card.className = "card";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "搜索生词本 / Search wordbook";
+    card.appendChild(input);
 
-    <div class="hr"></div>
-    <div id="quizArea"></div>
-  `;
+    const list = document.createElement("div");
+    list.className = "list";
+    card.appendChild(list);
 
-  setTimeout(async ()=>{
-    const start = el.querySelector('#startQuiz');
-    const reset = el.querySelector('#resetQuiz');
-    const area = el.querySelector('#quizArea');
-    const sel = el.querySelector('#qSub');
-    const cnt = el.querySelector('#qCount');
-
-    reset.onclick = ()=>{
-      if(confirm(state.cnOn?'确认清空统计？（不会删除词库）':'Reset stats?')){
-        state.stats = {};
-        saveState(state);
-        toast(state.cnOn?'已清空统计':'Stats reset');
+    const row = document.createElement("div");
+    row.className = "row";
+    const exportBtn = document.createElement("button");
+    exportBtn.textContent = "导出 JSON";
+    exportBtn.onclick = () => {
+      const data = JSON.stringify(getWordbook(), null, 2);
+      const blob = new Blob([data], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "wordbook.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    };
+    const clearBtn = document.createElement("button");
+    clearBtn.textContent = "清空";
+    clearBtn.onclick = () => {
+      if (confirm("确认清空生词本？")) {
+        saveWordbook([]);
         render();
       }
     };
+    row.appendChild(exportBtn);
+    row.appendChild(clearBtn);
+    card.appendChild(row);
 
-    start.onclick = async ()=>{
-      const subject = sel.value;
-      await loadSubjectData(subject);
-      const inst = CACHE.instructions[subject] || [];
-      const n = parseInt(cnt.value,10);
-      if(inst.length===0){
-        area.innerHTML = `<div class="muted">No data for ${subject}</div>`;
+    function draw(q) {
+      list.innerHTML = "";
+      const query = (q || "").trim().toLowerCase();
+      const items = getWordbook().filter((x) => !query || x.term.toLowerCase().includes(query) || (x.zh||"").includes(query));
+      if (items.length === 0) {
+        list.innerHTML = `<div class="hint">还没有生词。你可以在题目里 Shift+点击单词，或在词典页加入。</div>`;
         return;
       }
-      const picked = weightedPick(subject, n);
-      runQuiz(area, subject, picked);
-    };
-  },0);
-
-  return el;
-}
-
-function weightedPick(subject, n){
-  const inst = CACHE.instructions[subject] || [];
-  const tagStats = state.stats[subject]?.tagStats || {};
-  // compute per-tag weight
-  const tagWeight = {};
-  for(const c of inst){
-    for(const t of (c.tags||[])){
-      if(tagWeight[t] == null) tagWeight[t] = 1;
+      items.slice(0, 500).forEach((x) => {
+        const it = document.createElement("div");
+        it.className = "item";
+        it.innerHTML = `<div class="k">${escapeHTML(x.term)}</div>
+                        <div class="z">${escapeHTML(x.zh || "")}</div>
+                        <div class="small" style="margin-top:6px">复习次数：${x.seen || 1}</div>
+                        <div class="row" style="margin-top:10px">
+                          <button class="primary">🔊 发音</button>
+                          <button>查词</button>
+                          <button>删除</button>
+                        </div>`;
+        const [b1,b2,b3] = it.querySelectorAll("button");
+        b1.onclick = (e) => { e.stopPropagation(); speakUK(x.term); };
+        b2.onclick = (e) => { e.stopPropagation(); openGloss(x.term, null); };
+        b3.onclick = (e) => {
+          e.stopPropagation();
+          const wb = getWordbook().filter((k) => k.key !== x.key);
+          saveWordbook(wb);
+          render();
+        };
+        list.appendChild(it);
+      });
     }
-  }
-  for(const [t,v] of Object.entries(tagStats)){
-    const seen = v.seen||0, wrong=v.wrong||0;
-    const wrongRate = seen ? (wrong/seen) : 0;
-    // basic weight formula
-    tagWeight[t] = 1 + 2*wrongRate + 0.5*Math.max(0, 3-seen)/3;
-  }
-  // pick cards by first picking a tag, then a card from that tag
-  const tags = Object.keys(tagWeight);
-  const tagCum = [];
-  let sum = 0;
-  for(const t of tags){
-    sum += tagWeight[t];
-    tagCum.push([t,sum]);
-  }
-  function pickTag(){
-    const r = Math.random()*sum;
-    for(const [t,c] of tagCum) if(r<=c) return t;
-    return tags[tags.length-1];
+
+    input.oninput = () => draw(input.value);
+    draw("");
+
+    content.appendChild(card);
   }
 
-  const picked = [];
-  const used = new Set();
-  let guard = 0;
-  while(picked.length < Math.min(n, inst.length) && guard < 5000){
-    guard++;
-    const t = pickTag();
-    const candidates = inst.map((c,i)=>({c,i})).filter(x=> (x.c.tags||[]).includes(t));
-    if(candidates.length===0) continue;
-    const x = candidates[Math.floor(Math.random()*candidates.length)];
-    if(used.has(x.i)) continue;
-    used.add(x.i);
-    picked.push(x.c);
-  }
-  // fallback fill random
-  while(picked.length < Math.min(n, inst.length)){
-    const i = Math.floor(Math.random()*inst.length);
-    if(!used.has(i)){ used.add(i); picked.push(inst[i]); }
-  }
-  return picked;
-}
+  function renderProgress(main) {
+    const title = document.createElement("div");
+    title.className = "badge";
+    title.textContent = "学习成果（本机）";
 
-function runQuiz(container, subject, cards){
-  let idx = 0;
-  let total = cards.length * 3;
-  let got = 0;
-  const answers = [];
+    main.appendChild(panelHeader(title, null));
+    const content = document.createElement("div");
+    content.className = "content";
+    main.appendChild(content);
 
-  function renderOne(){
-    const c = cards[idx];
-    const en = kwWrap(c.text_en, subject);
-    container.innerHTML = `
-      <div class="panel">
-        <div class="row" style="justify-content:space-between; align-items:center;">
-          <div class="pill">${subject.toUpperCase()} • ${state.cnOn?'测验':'Quiz'} • ${idx+1}/${cards.length}</div>
-          <div class="muted">${state.cnOn?'总分':'Score'}: <span class="score">${got}</span> / ${total}</div>
-        </div>
-        <div style="margin-top:10px; font-size:18px; line-height:1.45">${en}</div>
-        ${state.cnOn ? `<div class="muted" style="margin-top:10px">${c.text_zh||''}</div>` : ''}
+    const wb = getWordbook();
+    const cache = (() => { try { return JSON.parse(localStorage.getItem("dictCache")||"{}"); } catch(_) { return {}; } })();
+    const cachedCount = Object.keys(cache).length;
 
-        <div class="hr"></div>
-        <div class="muted">${state.cnOn?'1) 这题要你做什么？':'1) What to do?'}</div>
-        <div class="choices" id="q1"></div>
-
-        <div class="muted" style="margin-top:10px">${state.cnOn?'2) 你需要抓哪些信息？':'2) What to notice?'}</div>
-        <div class="choices" id="q2"></div>
-
-        <div class="muted" style="margin-top:10px">${state.cnOn?'3) 最终要输出什么格式？':'3) What to write?'}</div>
-        <div class="choices" id="q3"></div>
-
-        <div class="hr"></div>
-        <div class="row">
-          <button class="btn primary" id="submit">${state.cnOn?'提交':'Submit'}</button>
-          <button class="btn" id="skip">${state.cnOn?'跳过':'Skip'}</button>
-        </div>
-        <div id="fb" style="margin-top:10px"></div>
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="en">当前设备进度</div>
+      <div class="cn">This device only (offline). 不会上传云端。</div>
+      <div class="chips">
+        <span class="chip">生词本：${wb.length} 个</span>
+        <span class="chip">已缓存词典：${cachedCount} 条</span>
+      </div>
+      <div class="small" style="margin-top:12px">
+        建议：每周导出一次生词本 JSON 作为备份（可存在 iCloud/Google Drive）。
       </div>
     `;
-    attachKwHandlers(container, subject);
-
-    const correct1 = new Set(c.quiz?.task_types || []);
-    const correct2 = new Set(c.quiz?.notice || []);
-    const correct3 = c.quiz?.output || '';
-
-    const bank1 = (CACHE.patterns[subject]?.task_types || []).slice();
-    const bank2 = (CACHE.patterns[subject]?.notice || []).slice();
-    const bank3 = (CACHE.patterns[subject]?.outputs || []).slice();
-
-    const q1 = container.querySelector('#q1');
-    const q2 = container.querySelector('#q2');
-    const q3 = container.querySelector('#q3');
-
-    const opts1 = sampleWithCorrect(bank1, correct1, 6);
-    const opts2 = sampleWithCorrect(bank2, correct2, 6);
-    const opts3 = sampleOneWithCorrect(bank3, correct3, 5);
-
-    let sel1 = new Set(), sel2 = new Set(), sel3 = '';
-
-    opts1.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject,'task',o);
-      chip.onclick = ()=>{ sel1.has(o) ? (sel1.delete(o), chip.classList.remove('sel')) : (sel1.add(o), chip.classList.add('sel')); };
-      q1.appendChild(chip);
-    });
-    opts2.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject,'notice',o);
-      chip.onclick = ()=>{ sel2.has(o) ? (sel2.delete(o), chip.classList.remove('sel')) : (sel2.add(o), chip.classList.add('sel')); };
-      q2.appendChild(chip);
-    });
-    opts3.forEach(o=>{
-      const chip = document.createElement('div');
-      chip.className='chip';
-      chip.textContent = labelFor(subject,'output',o);
-      chip.onclick = ()=>{
-        sel3 = o;
-        [...q3.children].forEach(c=>c.classList.remove('sel'));
-        chip.classList.add('sel');
-      };
-      q3.appendChild(chip);
-    });
-
-    container.querySelector('#skip').onclick = ()=>{
-      answers.push({cardId:c.id, score:0, tags:c.tags||[]});
-      bumpTag(subject, c.tags, false);
-      idx++;
-      if(idx>=cards.length) return renderReport();
-      renderOne();
-    };
-
-    container.querySelector('#submit').onclick = ()=>{
-      let s = 0;
-      if(setEq(sel1, correct1)) s++;
-      if(setEq(sel2, correct2)) s++;
-      if(sel3===correct3 && sel3!=='') s++;
-
-      got += s;
-      const correct = (s===3);
-      bumpTag(subject, c.tags, correct);
-
-      answers.push({cardId:c.id, score:s, tags:c.tags||[]});
-
-      const fb = container.querySelector('#fb');
-      fb.innerHTML = `
-        <div class="panel">
-          <div class="row" style="justify-content:space-between; align-items:center;">
-            <div class="score">${s}/3</div>
-            <div class="pill">${correct ? (state.cnOn?'正确':'Correct') : (state.cnOn?'需要加强':'Needs work')}</div>
-          </div>
-          <div class="muted" style="margin-top:6px">${state.cnOn?'正确答案：':'Answer key:'}</div>
-          <div style="margin-top:6px">
-            <div><span class="muted">1)</span> ${[...correct1].map(x=>labelFor(subject,'task',x)).join(', ')}</div>
-            <div><span class="muted">2)</span> ${[...correct2].map(x=>labelFor(subject,'notice',x)).join(', ')}</div>
-            <div><span class="muted">3)</span> ${labelFor(subject,'output',correct3)}</div>
-          </div>
-          <div class="hr"></div>
-          <button class="btn primary" id="nextOne">${state.cnOn?'下一题':'Next'}</button>
-        </div>
-      `;
-      container.querySelector('#nextOne').onclick = ()=>{
-        idx++;
-        if(idx>=cards.length) return renderReport();
-        renderOne();
-      };
-    };
+    content.appendChild(card);
   }
 
-  function renderReport(){
-    // aggregate weak tags
-    const tagAgg = {};
-    for(const a of answers){
-      for(const t of (a.tags||[])){
-        tagAgg[t] = tagAgg[t] || {seen:0, score:0};
-        tagAgg[t].seen += 1;
-        tagAgg[t].score += a.score;
-      }
-    }
-    const tagList = Object.entries(tagAgg).map(([t,v])=>{
-      const rate = v.seen ? (v.score/(v.seen*3)) : 0;
-      return {tag:t, rate};
-    }).sort((a,b)=>a.rate-b.rate).slice(0,8);
-
-    container.innerHTML = `
-      <div class="card">
-        <h2>${state.cnOn?'测验报告':'Quiz Report'}</h2>
-        <div class="row" style="justify-content:space-between; align-items:center;">
-          <div class="score">${got} / ${total}</div>
-          <div class="pill">${state.cnOn?'学科':'Subject'}: ${subject.toUpperCase()}</div>
-        </div>
-        <div class="hr"></div>
-        <div class="muted">${state.cnOn?'薄弱标签（优先复习）':'Weak tags (review first)'}</div>
-        <div style="margin-top:8px">${tagList.map(x=>`<span class="pill">${x.tag} • ${Math.round(x.rate*100)}%</span>`).join(' ') || '—'}</div>
-        <div class="hr"></div>
-        <div class="row">
-          <button class="btn primary" id="again">${state.cnOn?'再测一次':'Try again'}</button>
-          <button class="btn" id="goLearn">${state.cnOn?'去读题':'Go Learn'}</button>
-        </div>
-      </div>
-    `;
-    container.querySelector('#again').onclick = ()=>runQuiz(container, subject, weightedPick(subject, cards.length));
-    container.querySelector('#goLearn').onclick = ()=>{
-      currentTab = subject; state.currentTab = subject; currentSub='learn'; state.currentSub='learn'; saveState(state); render();
-    };
+  function render() {
+    renderTabs();
+    renderMain();
+    applyTheme();
   }
 
-  function sampleWithCorrect(bank, correctSet, n){
-    const opts = new Set([...correctSet]);
-    while(opts.size < Math.min(n, bank.length)){
-      opts.add(bank[Math.floor(Math.random()*bank.length)]);
-    }
-    return [...opts];
-  }
-  function sampleOneWithCorrect(bank, correctVal, n){
-    const opts = new Set([correctVal]);
-    while(opts.size < Math.min(n, bank.length)){
-      opts.add(bank[Math.floor(Math.random()*bank.length)]);
-    }
-    return [...opts];
-  }
-
-  renderOne();
-}
-
-function renderWordBank(){
-  const el = document.createElement('div');
-  el.className='card';
-  const ids = Object.keys(state.wordbank||{});
-  el.innerHTML = `
-    <div class="row" style="justify-content:space-between; align-items:center;">
-      <h2 style="margin:0">${state.cnOn?'生词本':'Word Bank'}</h2>
-      <div class="pill">${ids.length}</div>
-    </div>
-    <div class="muted">${state.cnOn?'点击词条可查看解释。':'Tap an item to view details.'}</div>
-    <div class="hr"></div>
-    <div id="wbList"></div>
-    <div class="hr"></div>
-    <div class="row">
-      <button class="btn danger" id="clearWB">${state.cnOn?'清空生词本':'Clear Word Bank'}</button>
-    </div>
-  `;
-  setTimeout(async ()=>{
-    const list = el.querySelector('#wbList');
-    list.innerHTML='';
-    if(ids.length===0){
-      list.innerHTML = `<div class="muted">${state.cnOn?'还没有生词。点题干里的词即可加入。':'No words yet. Tap a keyword to add.'}</div>`;
-    } else {
-      // group by subject
-      const bySub = {};
-      for(const id of ids){
-        const w = state.wordbank[id];
-        bySub[w.subject] = bySub[w.subject] || [];
-        bySub[w.subject].push({id, ...w});
-      }
-      for(const [sub, arr] of Object.entries(bySub)){
-        const box = document.createElement('div');
-        box.className='panel';
-        box.innerHTML = `<div class="pill">${sub.toUpperCase()} • ${arr.length}</div><div class="hr"></div>`;
-        arr.sort((a,b)=>(b.addedAt||0)-(a.addedAt||0)).slice(0,120).forEach(item=>{
-          const row = document.createElement('div');
-          row.className='row';
-          row.style.justifyContent='space-between';
-          row.style.alignItems='center';
-          row.style.padding='8px 0';
-          row.innerHTML = `<div><b>${item.lemma}</b> <span class="muted">(${Math.round((item.mastery||0)*100)}%)</span></div>
-            <button class="btn small">✕</button>`;
-          row.onclick = (e)=>{
-            if(e.target.tagName.toLowerCase()==='button') return;
-            // ensure subject data loaded
-            loadSubjectData(sub).then(()=>openWordDialog(sub, item.lemma));
-          };
-          row.querySelector('button').onclick = ()=>{
-            delete state.wordbank[item.id];
-            saveState(state);
-            toast(state.cnOn?'已移除':'Removed');
-            render();
-          };
-          box.appendChild(row);
-        });
-        list.appendChild(box);
-      }
-    }
-    el.querySelector('#clearWB').onclick = ()=>{
-      if(confirm(state.cnOn?'确认清空生词本？':'Clear Word Bank?')){
-        state.wordbank = {};
-        saveState(state);
-        render();
-      }
-    };
-  },0);
-  return el;
-}
-
-function renderProgress(){
-  const el = document.createElement('div');
-  el.className='card';
-
-  const blocks = [];
-  for(const s of ['math','science','english','social_studies','chinese']){
-    const ts = state.stats[s]?.tagStats || {};
-    let seen=0, wrong=0;
-    for(const v of Object.values(ts)){
-      seen += v.seen||0;
-      wrong += v.wrong||0;
-    }
-    const rate = seen ? (1 - wrong/seen) : 0;
-    const weak = Object.entries(ts).filter(([t,v])=>(v.seen||0)>=3).map(([t,v])=>({t, r:(v.wrong||0)/(v.seen||1)})).sort((a,b)=>b.r-a.r).slice(0,5);
-    blocks.push({s, seen, rate, weak});
-  }
-
-  el.innerHTML = `
-    <h2 style="margin:0">${state.cnOn?'成果与薄弱点':'Progress & Weak Points'}</h2>
-    <div class="muted">${state.cnOn?'这里的统计来自 Learn/Drills/Quiz 的“理解评分”，不是做题计算。':'Stats reflect understanding checks, not calculation.'}</div>
-    <div class="hr"></div>
-    <div id="pBlocks"></div>
-  `;
-
-  setTimeout(()=>{
-    const p = el.querySelector('#pBlocks');
-    blocks.forEach(b=>{
-      const box = document.createElement('div');
-      box.className='panel';
-      box.style.marginBottom='10px';
-      box.innerHTML = `
-        <div class="row" style="justify-content:space-between; align-items:center;">
-          <div class="pill">${b.s.toUpperCase()}</div>
-          <div class="muted">${state.cnOn?'样本':'Seen'}: ${b.seen} • ${state.cnOn?'理解正确率':'Accuracy'}: ${Math.round(b.rate*100)}%</div>
-        </div>
-        <div style="margin-top:8px" class="muted">${state.cnOn?'薄弱标签':'Weak tags'}:</div>
-        <div style="margin-top:6px">${b.weak.map(x=>`<span class="pill">${x.t} • ${Math.round(x.r*100)}%</span>`).join(' ') || '—'}</div>
-      `;
-      p.appendChild(box);
-    });
-  },0);
-
-  return el;
-}
-
-function renderBackup(){
-  const el = document.createElement('div');
-  el.className='card';
-  el.innerHTML = `
-    <h2 style="margin:0">${state.cnOn?'备份 / 恢复':'Backup / Restore'}</h2>
-    <div class="muted">${state.cnOn?'建议每周导出一次备份（iPad 有时会清理缓存）。':'Export a backup weekly. iPad may clear storage sometimes.'}</div>
-    <div class="hr"></div>
-    <div class="row">
-      <button class="btn primary" id="exportBtn">${state.cnOn?'导出备份文件':'Export backup'}</button>
-      <button class="btn" id="importBtn">${state.cnOn?'导入备份文件':'Import backup'}</button>
-      <input type="file" id="fileInput" accept="application/json" style="display:none" />
-    </div>
-    <div class="hr"></div>
-    <div class="muted">${state.cnOn?'导出内容：生词本 + 统计 + 你的设置。':'Export includes Word Bank + stats + settings.'}</div>
-  `;
-  setTimeout(()=>{
-    el.querySelector('#exportBtn').onclick = ()=>{
-      const payload = JSON.stringify(state, null, 2);
-      const blob = new Blob([payload], {type:'application/json'});
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = `p3-reader-backup-${new Date().toISOString().slice(0,10)}.json`;
-      a.click();
-      URL.revokeObjectURL(a.href);
-      toast(state.cnOn?'已导出':'Exported');
-    };
-    const fileInput = el.querySelector('#fileInput');
-    el.querySelector('#importBtn').onclick = ()=> fileInput.click();
-    fileInput.onchange = async ()=>{
-      const f = fileInput.files[0];
-      if(!f) return;
-      const text = await f.text();
-      try{
-        const obj = JSON.parse(text);
-        state = obj;
-        saveState(state);
-        toast(state.cnOn?'已导入':'Imported');
-        location.reload();
-      }catch(e){
-        alert(state.cnOn?'导入失败：文件格式不对':'Import failed: invalid file');
-      }
-    };
-  },0);
-  return el;
-}
-
-async function render(){
-  toggleCNBtn.textContent = state.cnOn ? '中文: 开' : '中文: 关';
-  renderTabs();
-  appEl.innerHTML = '';
-  setStatus(state.cnOn ? '离线可用（首次打开需缓存）' : 'Offline-ready (first load caches assets)');
-
-  if(currentTab==='home'){ appEl.appendChild(renderHome()); return; }
-  if(currentTab==='quiz'){ appEl.appendChild(renderQuiz()); return; }
-  if(currentTab==='wordbank'){ appEl.appendChild(renderWordBank()); return; }
-  if(currentTab==='progress'){ appEl.appendChild(renderProgress()); return; }
-  if(currentTab==='backup'){ appEl.appendChild(renderBackup()); return; }
-
-  await loadSubjectData(currentTab);
-  appEl.appendChild(renderSubject(currentTab));
-}
-
-// Register Service Worker
-if('serviceWorker' in navigator){
-  window.addEventListener('load', async ()=>{
-    try{
-      await navigator.serviceWorker.register('./sw.js');
-    }catch(e){
-      // ignore
-    }
+  // click outside dialog closes
+  dlg.addEventListener("click", (e) => {
+    const rect = dlg.getBoundingClientRect();
+    const inDialog =
+      rect.top <= e.clientY &&
+      e.clientY <= rect.top + rect.height &&
+      rect.left <= e.clientX &&
+      e.clientX <= rect.left + rect.width;
+    if (!inDialog) dlg.close();
   });
-}
 
-render();
+  // Keyboard shortcuts (desktop)
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && dlg.open) dlg.close();
+  });
+
+  // Boot
+  preloadCore().catch(() => {
+    applyTheme();
+    render();
+  });
+
+})();
