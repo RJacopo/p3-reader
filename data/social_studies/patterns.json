@@ -1,0 +1,85 @@
+{
+  "task_types": [
+    "identify",
+    "compare",
+    "cause_effect",
+    "explain_reason",
+    "sequence",
+    "map_reading"
+  ],
+  "notice": [
+    "keywords",
+    "place_names",
+    "time_order",
+    "cause_effect",
+    "examples"
+  ],
+  "outputs": [
+    "short_sentence",
+    "choice",
+    "label",
+    "list_two"
+  ],
+  "labels": {
+    "task:identify": {
+      "en": "Identify",
+      "zh": "识别"
+    },
+    "task:compare": {
+      "en": "Compare",
+      "zh": "比较"
+    },
+    "task:cause_effect": {
+      "en": "Cause & effect",
+      "zh": "因果"
+    },
+    "task:explain_reason": {
+      "en": "Explain reason",
+      "zh": "解释原因"
+    },
+    "task:sequence": {
+      "en": "Sequence",
+      "zh": "排序"
+    },
+    "task:map_reading": {
+      "en": "Read a map",
+      "zh": "读地图"
+    },
+    "notice:keywords": {
+      "en": "Keywords",
+      "zh": "关键词"
+    },
+    "notice:place_names": {
+      "en": "Place names",
+      "zh": "地点名称"
+    },
+    "notice:time_order": {
+      "en": "Time order",
+      "zh": "时间顺序"
+    },
+    "notice:cause_effect": {
+      "en": "Cause & effect",
+      "zh": "因果关系"
+    },
+    "notice:examples": {
+      "en": "Examples",
+      "zh": "例子"
+    },
+    "output:short_sentence": {
+      "en": "Short sentence",
+      "zh": "一句话"
+    },
+    "output:choice": {
+      "en": "Choice",
+      "zh": "选项"
+    },
+    "output:label": {
+      "en": "Label",
+      "zh": "标注"
+    },
+    "output:list_two": {
+      "en": "List two points",
+      "zh": "列出两点"
+    }
+  }
+}

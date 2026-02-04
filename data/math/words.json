@@ -1,0 +1,285 @@
+[
+  {
+    "id": "word_remaining",
+    "lemma": "remaining",
+    "pos": "adj",
+    "zh": "剩下的；剩余的",
+    "en_simple": "what is left after something is taken away",
+    "collocations": [
+      "remaining distance",
+      "remaining number"
+    ],
+    "synonyms": [
+      "left"
+    ],
+    "examples": [
+      {
+        "en": "Find the remaining distance.",
+        "zh": "求剩余的距离。"
+      }
+    ],
+    "tags": [
+      "math",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "word_total",
+    "lemma": "total",
+    "pos": "n/adj",
+    "zh": "总数；总共的",
+    "en_simple": "the whole amount",
+    "collocations": [
+      "total number",
+      "in total"
+    ],
+    "synonyms": [
+      "sum"
+    ],
+    "examples": [
+      {
+        "en": "How many in total?",
+        "zh": "一共多少？"
+      }
+    ],
+    "tags": [
+      "math",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "word_difference",
+    "lemma": "difference",
+    "pos": "n",
+    "zh": "差；不同",
+    "en_simple": "how much one number is more than another",
+    "collocations": [
+      "find the difference"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Find the difference between 65 and 29.",
+        "zh": "求65和29的差。"
+      }
+    ],
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "id": "word_compare",
+    "lemma": "compare",
+    "pos": "v",
+    "zh": "比较",
+    "en_simple": "to look at two things and see how they are similar or different",
+    "collocations": [
+      "compare … using <, = or >"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Compare 356 and 365.",
+        "zh": "比较356和365。"
+      }
+    ],
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "id": "word_convert",
+    "lemma": "convert",
+    "pos": "v",
+    "zh": "换算",
+    "en_simple": "to change from one unit to another",
+    "collocations": [
+      "convert cm to m",
+      "convert km to m"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Convert 2 km to metres.",
+        "zh": "把2千米换算成米。"
+      }
+    ],
+    "tags": [
+      "math",
+      "units"
+    ]
+  },
+  {
+    "id": "word_even",
+    "lemma": "even",
+    "pos": "adj",
+    "zh": "偶数的",
+    "en_simple": "a number that can be divided by 2",
+    "collocations": [
+      "even number"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "234 is an even number.",
+        "zh": "234是偶数。"
+      }
+    ],
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "id": "word_odd",
+    "lemma": "odd",
+    "pos": "adj",
+    "zh": "奇数的",
+    "en_simple": "a number that cannot be divided by 2",
+    "collocations": [
+      "odd number"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "243 is an odd number.",
+        "zh": "243是奇数。"
+      }
+    ],
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "id": "word_divide",
+    "lemma": "divide",
+    "pos": "v",
+    "zh": "除；分",
+    "en_simple": "to split into equal parts",
+    "collocations": [
+      "divide by",
+      "divide equally"
+    ],
+    "synonyms": [
+      "share"
+    ],
+    "examples": [
+      {
+        "en": "Divide 54 by 3.",
+        "zh": "54除以3。"
+      }
+    ],
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "id": "word_metres",
+    "lemma": "metres",
+    "pos": "n",
+    "zh": "米",
+    "en_simple": "unit of length: m",
+    "collocations": [
+      "in metres"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Write in metres.",
+        "zh": "写成米。"
+      }
+    ],
+    "tags": [
+      "math",
+      "units"
+    ]
+  },
+  {
+    "id": "word_kilometres",
+    "lemma": "kilometres",
+    "pos": "n",
+    "zh": "千米",
+    "en_simple": "unit of length: km",
+    "collocations": [
+      "in kilometres"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "1884 km",
+        "zh": "1884千米"
+      }
+    ],
+    "tags": [
+      "math",
+      "units"
+    ]
+  },
+  {
+    "id": "word_centimetres",
+    "lemma": "centimetres",
+    "pos": "n",
+    "zh": "厘米",
+    "en_simple": "unit of length: cm",
+    "collocations": [
+      "in centimetres"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "25 cm",
+        "zh": "25厘米"
+      }
+    ],
+    "tags": [
+      "math",
+      "units"
+    ]
+  },
+  {
+    "id": "word_times",
+    "lemma": "times",
+    "pos": "n",
+    "zh": "倍",
+    "en_simple": "how many times bigger",
+    "collocations": [
+      "3 times as many"
+    ],
+    "synonyms": [
+      "multiplied by"
+    ],
+    "examples": [
+      {
+        "en": "3 times as many as B.",
+        "zh": "是B的3倍。"
+      }
+    ],
+    "tags": [
+      "math",
+      "bar_model"
+    ]
+  },
+  {
+    "id": "word_left",
+    "lemma": "left",
+    "pos": "adj",
+    "zh": "剩下的",
+    "en_simple": "remaining after some is taken away",
+    "collocations": [
+      "left over",
+      "how many left"
+    ],
+    "synonyms": [
+      "remaining"
+    ],
+    "examples": [
+      {
+        "en": "How many are left?",
+        "zh": "还剩多少？"
+      }
+    ],
+    "tags": [
+      "math",
+      "word_problem"
+    ]
+  }
+]

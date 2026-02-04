@@ -1,0 +1,85 @@
+{
+  "task_types": [
+    "main_idea",
+    "details",
+    "infer",
+    "sequence",
+    "grammar_instruction",
+    "vocab_in_context"
+  ],
+  "notice": [
+    "question_words",
+    "connectors",
+    "pronouns",
+    "time_order",
+    "context_clues"
+  ],
+  "outputs": [
+    "choice",
+    "short_phrase",
+    "sentence",
+    "underline_or_circle"
+  ],
+  "labels": {
+    "task:main_idea": {
+      "en": "Main idea",
+      "zh": "主旨大意"
+    },
+    "task:details": {
+      "en": "Find details",
+      "zh": "找细节"
+    },
+    "task:infer": {
+      "en": "Infer",
+      "zh": "推断"
+    },
+    "task:sequence": {
+      "en": "Sequence",
+      "zh": "排序"
+    },
+    "task:grammar_instruction": {
+      "en": "Grammar task",
+      "zh": "语法题"
+    },
+    "task:vocab_in_context": {
+      "en": "Vocab in context",
+      "zh": "语境词义"
+    },
+    "notice:question_words": {
+      "en": "Question words",
+      "zh": "疑问词"
+    },
+    "notice:connectors": {
+      "en": "Connectors",
+      "zh": "连接词"
+    },
+    "notice:pronouns": {
+      "en": "Pronouns",
+      "zh": "代词指代"
+    },
+    "notice:time_order": {
+      "en": "Time order",
+      "zh": "时间顺序"
+    },
+    "notice:context_clues": {
+      "en": "Context clues",
+      "zh": "语境线索"
+    },
+    "output:choice": {
+      "en": "Choice",
+      "zh": "选项"
+    },
+    "output:short_phrase": {
+      "en": "Short phrase",
+      "zh": "短语"
+    },
+    "output:sentence": {
+      "en": "Sentence",
+      "zh": "一句话"
+    },
+    "output:underline_or_circle": {
+      "en": "Underline/circle",
+      "zh": "划线/圈出"
+    }
+  }
+}

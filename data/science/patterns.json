@@ -1,0 +1,155 @@
+{
+  "task_types": [
+    "classify",
+    "identify_characteristics",
+    "compare_groups",
+    "reproduction",
+    "magnets",
+    "materials_properties",
+    "explain",
+    "forces_push_pull",
+    "plant_parts",
+    "life_cycles",
+    "simple_investigation",
+    "human_body"
+  ],
+  "notice": [
+    "key_terms",
+    "group_names",
+    "cause_effect",
+    "features",
+    "life_cycle",
+    "variables",
+    "tools",
+    "stages",
+    "functions",
+    "forces"
+  ],
+  "outputs": [
+    "group_or_label",
+    "short_sentence",
+    "choice",
+    "fill_blank_word",
+    "diagram_label",
+    "table",
+    "prediction"
+  ],
+  "labels": {
+    "task:classify": {
+      "en": "Classify",
+      "zh": "分类"
+    },
+    "task:identify_characteristics": {
+      "en": "Identify characteristics",
+      "zh": "找特征"
+    },
+    "task:compare_groups": {
+      "en": "Compare groups",
+      "zh": "比较分类"
+    },
+    "task:reproduction": {
+      "en": "Reproduction",
+      "zh": "繁殖/生命周期"
+    },
+    "task:magnets": {
+      "en": "Magnets",
+      "zh": "磁铁"
+    },
+    "task:materials_properties": {
+      "en": "Materials properties",
+      "zh": "材料性质"
+    },
+    "task:explain": {
+      "en": "Explain",
+      "zh": "解释"
+    },
+    "notice:key_terms": {
+      "en": "Key terms",
+      "zh": "关键术语"
+    },
+    "notice:group_names": {
+      "en": "Group names",
+      "zh": "分类名称"
+    },
+    "notice:cause_effect": {
+      "en": "Cause & effect",
+      "zh": "因果关系"
+    },
+    "notice:features": {
+      "en": "Features",
+      "zh": "特征/外表"
+    },
+    "notice:life_cycle": {
+      "en": "Life cycle stages",
+      "zh": "生命周期阶段"
+    },
+    "output:group_or_label": {
+      "en": "Group/label",
+      "zh": "分类/标签"
+    },
+    "output:short_sentence": {
+      "en": "Short sentence",
+      "zh": "一句话"
+    },
+    "output:choice": {
+      "en": "Choice",
+      "zh": "选择"
+    },
+    "output:fill_blank_word": {
+      "en": "A word/phrase",
+      "zh": "填空词/短语"
+    },
+    "task:forces_push_pull": {
+      "en": "Forces (push/pull)",
+      "zh": "力（推/拉）"
+    },
+    "task:plant_parts": {
+      "en": "Plant parts/functions",
+      "zh": "植物部位/功能"
+    },
+    "task:life_cycles": {
+      "en": "Life cycles",
+      "zh": "生命周期"
+    },
+    "task:simple_investigation": {
+      "en": "Simple investigation",
+      "zh": "简单探究"
+    },
+    "task:human_body": {
+      "en": "Human body/system",
+      "zh": "人体系统"
+    },
+    "notice:variables": {
+      "en": "Variables",
+      "zh": "变量"
+    },
+    "notice:tools": {
+      "en": "Tools/equipment",
+      "zh": "工具/器材"
+    },
+    "notice:stages": {
+      "en": "Stages/order",
+      "zh": "阶段/顺序"
+    },
+    "notice:functions": {
+      "en": "Functions",
+      "zh": "功能"
+    },
+    "notice:forces": {
+      "en": "Push/pull",
+      "zh": "推/拉"
+    },
+    "output:diagram_label": {
+      "en": "Label a diagram",
+      "zh": "标注图"
+    },
+    "output:table": {
+      "en": "A table",
+      "zh": "表格"
+    },
+    "output:prediction": {
+      "en": "Prediction",
+      "zh": "预测"
+    }
+  }
+}

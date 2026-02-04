@@ -1,0 +1,3724 @@
+[
+  {
+    "id": "sci_inst_0001",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Classify these animals into mammals, birds and fish.",
+    "text_zh": "把这些动物分类成哺乳动物、鸟类和鱼类。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "features"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "classify",
+      "animals"
+    ]
+  },
+  {
+    "id": "sci_inst_0002",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Fungi are usually found in damp places.",
+    "text_zh": "真菌通常在潮湿的地方发现。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "fungi",
+      "habitat"
+    ]
+  },
+  {
+    "id": "sci_inst_0003",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Birds reproduce by laying eggs.",
+    "text_zh": "鸟类通过产卵繁殖。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "reproduction"
+      ],
+      "notice": [
+        "key_terms",
+        "life_cycle"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "reproduction",
+      "birds"
+    ]
+  },
+  {
+    "id": "sci_inst_0004",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Fish are covered with scales and have gills to breathe.",
+    "text_zh": "鱼身上有鳞片，用鳃呼吸。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "fish",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0005",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Warm-blooded animals have a constant body temperature.",
+    "text_zh": "恒温动物体温保持恒定。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare_groups"
+      ],
+      "notice": [
+        "key_terms",
+        "features"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "warm_blooded",
+      "temperature"
+    ]
+  },
+  {
+    "id": "sci_inst_0006",
+    "subject": "science",
+    "topic": "interactions",
+    "text_en": "Like poles repel, unlike poles attract.",
+    "text_zh": "同极相斥，异极相吸。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "key_terms",
+        "cause_effect"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel"
+    ]
+  },
+  {
+    "id": "sci_inst_0007",
+    "subject": "science",
+    "topic": "materials",
+    "text_en": "Choose a suitable material for a raincoat.",
+    "text_zh": "为雨衣选择合适的材料。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0008",
+    "subject": "science",
+    "topic": "cycles",
+    "text_en": "Arrange the stages of a butterfly life cycle in order.",
+    "text_zh": "把蝴蝶的生命周期阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "reproduction"
+      ],
+      "notice": [
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0009",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Animals depend on one another to maintain the balance in nature.",
+    "text_zh": "动物相互依赖来维持自然平衡。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "explain"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "ecosystem",
+      "depend"
+    ]
+  },
+  {
+    "id": "sci_inst_0010",
+    "subject": "science",
+    "topic": "diversity",
+    "text_en": "Plants can be classified into flowering and non-flowering plants.",
+    "text_zh": "植物可分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0011",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0012",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0013",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0014",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0015",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of mammals.",
+    "text_zh": "写出 哺乳动物 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0016",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0017",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of rubber that makes it suitable for a raincoat.",
+    "text_zh": "写出 rubber 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0018",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0019",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of mammals.",
+    "text_zh": "写出 哺乳动物 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0020",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0021",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0022",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0023",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0024",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0025",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0026",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0027",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0028",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0029",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0030",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0031",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0032",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of insects.",
+    "text_zh": "写出 昆虫 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0033",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0034",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of fish.",
+    "text_zh": "写出 鱼类 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0035",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0036",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0037",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0038",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0039",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0040",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0041",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0042",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0043",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0044",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0045",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0046",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0047",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0048",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0049",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0050",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0051",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0052",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of plastic that makes it suitable for a raincoat.",
+    "text_zh": "写出 plastic 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0053",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0054",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0055",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of rubber that makes it suitable for a raincoat.",
+    "text_zh": "写出 rubber 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0056",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0057",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0058",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0059",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0060",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of reptiles.",
+    "text_zh": "写出 爬行动物 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0061",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0062",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0063",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0064",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0065",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0066",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0067",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0068",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0069",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0070",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0071",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0072",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0073",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of fabric that makes it suitable for a raincoat.",
+    "text_zh": "写出 fabric 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0074",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0075",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0076",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0077",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0078",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0079",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0080",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0081",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0082",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0083",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0084",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of wood that makes it suitable for a raincoat.",
+    "text_zh": "写出 wood 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0085",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of birds.",
+    "text_zh": "写出 鸟类 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0086",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0087",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0088",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0089",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0090",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0091",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0092",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0093",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0094",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0095",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0096",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0097",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of fabric that makes it suitable for a raincoat.",
+    "text_zh": "写出 fabric 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0098",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of mammals.",
+    "text_zh": "写出 哺乳动物 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0099",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0100",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0101",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of fabric that makes it suitable for a raincoat.",
+    "text_zh": "写出 fabric 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0102",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0103",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0104",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of fish.",
+    "text_zh": "写出 鱼类 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0105",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0106",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0107",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0108",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of glass that makes it suitable for a raincoat.",
+    "text_zh": "写出 glass 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0109",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0110",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0111",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0112",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0113",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0114",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0115",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0116",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0117",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0118",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0119",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of fabric that makes it suitable for a raincoat.",
+    "text_zh": "写出 fabric 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0120",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0121",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0122",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0123",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0124",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0125",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0126",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0127",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0128",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0129",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0130",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0131",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0132",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0133",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0134",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0135",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0136",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0137",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0138",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of plastic that makes it suitable for a raincoat.",
+    "text_zh": "写出 plastic 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0139",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0140",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0141",
+    "subject": "science",
+    "topic": "diversity_materials",
+    "text_en": "State one property of fabric that makes it suitable for a raincoat.",
+    "text_zh": "写出 fabric 适合做雨衣的一个性质。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "materials_properties"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "materials",
+      "properties"
+    ]
+  },
+  {
+    "id": "sci_inst_0142",
+    "subject": "science",
+    "topic": "cycles_life_cycles",
+    "text_en": "Arrange the stages of a plant life cycle in order.",
+    "text_zh": "把植物生命周期的阶段按顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "life_cycles"
+      ],
+      "notice": [
+        "stages",
+        "life_cycle"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "life_cycle",
+      "sequence"
+    ]
+  },
+  {
+    "id": "sci_inst_0143",
+    "subject": "science",
+    "topic": "diversity_plants",
+    "text_en": "Classify these plants into flowering and non-flowering plants.",
+    "text_zh": "把植物分为开花植物与不开花植物。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify"
+      ],
+      "notice": [
+        "group_names",
+        "key_terms"
+      ],
+      "output": "group_or_label"
+    },
+    "tags": [
+      "plants",
+      "classify"
+    ]
+  },
+  {
+    "id": "sci_inst_0144",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0145",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0146",
+    "subject": "science",
+    "topic": "interactions_forces",
+    "text_en": "Identify whether the force is a push or a pull.",
+    "text_zh": "判断这个力是推还是拉。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "forces_push_pull"
+      ],
+      "notice": [
+        "forces",
+        "key_terms"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "forces",
+      "push_pull"
+    ]
+  },
+  {
+    "id": "sci_inst_0147",
+    "subject": "science",
+    "topic": "plant_parts_functions",
+    "text_en": "Match each plant part to its function.",
+    "text_zh": "把植物部位与其功能配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "plant_parts"
+      ],
+      "notice": [
+        "key_terms",
+        "functions"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "plants",
+      "functions",
+      "match"
+    ]
+  },
+  {
+    "id": "sci_inst_0148",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0149",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0150",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of birds.",
+    "text_zh": "写出 鸟类 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0151",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0152",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0153",
+    "subject": "science",
+    "topic": "simple_investigation",
+    "text_en": "Suggest one variable to keep the test fair.",
+    "text_zh": "写出一个需要保持不变的变量，使测试公平。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "simple_investigation"
+      ],
+      "notice": [
+        "variables",
+        "tools"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "investigation",
+      "variables",
+      "fair_test"
+    ]
+  },
+  {
+    "id": "sci_inst_0154",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of fish.",
+    "text_zh": "写出 鱼类 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0155",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0156",
+    "subject": "science",
+    "topic": "energy_everyday",
+    "text_en": "Name one form of energy used at home.",
+    "text_zh": "写出家里使用的一种能量形式。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "key_terms"
+      ],
+      "output": "fill_blank_word"
+    },
+    "tags": [
+      "energy",
+      "everyday"
+    ]
+  },
+  {
+    "id": "sci_inst_0157",
+    "subject": "science",
+    "topic": "diversity_animals",
+    "text_en": "Give one characteristic of reptiles.",
+    "text_zh": "写出 爬行动物 的一个特征。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify_characteristics"
+      ],
+      "notice": [
+        "features",
+        "key_terms"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "animals",
+      "characteristics"
+    ]
+  },
+  {
+    "id": "sci_inst_0158",
+    "subject": "science",
+    "topic": "interactions_magnets",
+    "text_en": "Predict what will happen when two like poles are brought close together.",
+    "text_zh": "预测两个同极靠近时会发生什么。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "magnets"
+      ],
+      "notice": [
+        "cause_effect",
+        "key_terms"
+      ],
+      "output": "prediction"
+    },
+    "tags": [
+      "magnets",
+      "attract_repel",
+      "predict"
+    ]
+  },
+  {
+    "id": "sci_inst_0159",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  },
+  {
+    "id": "sci_inst_0160",
+    "subject": "science",
+    "topic": "systems_human_digestive",
+    "text_en": "Label the mouth, stomach and intestines on the digestive system diagram.",
+    "text_zh": "在消化系统图上标注口、胃和肠。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "human_body"
+      ],
+      "notice": [
+        "tools",
+        "functions"
+      ],
+      "output": "diagram_label"
+    },
+    "tags": [
+      "human_body",
+      "digestive_system"
+    ]
+  }
+]

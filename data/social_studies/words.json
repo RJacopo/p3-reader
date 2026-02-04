@@ -1,0 +1,126 @@
+[
+  {
+    "id": "word_environment",
+    "lemma": "environment",
+    "pos": "n",
+    "zh": "环境",
+    "en_simple": "the air, water, and land around us",
+    "collocations": [
+      "protect the environment"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Keep the environment clean.",
+        "zh": "保持环境清洁。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  },
+  {
+    "id": "word_resources",
+    "lemma": "resources",
+    "pos": "n",
+    "zh": "资源",
+    "en_simple": "things we use like water and electricity",
+    "collocations": [
+      "save resources"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "We should save water.",
+        "zh": "我们应该节约用水。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  },
+  {
+    "id": "word_litter",
+    "lemma": "litter",
+    "pos": "v/n",
+    "zh": "乱丢垃圾；垃圾",
+    "en_simple": "trash left in public places",
+    "collocations": [
+      "litter on the ground"
+    ],
+    "synonyms": [
+      "trash"
+    ],
+    "examples": [
+      {
+        "en": "Do not litter.",
+        "zh": "不要乱丢垃圾。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  },
+  {
+    "id": "word_rules",
+    "lemma": "rules",
+    "pos": "n",
+    "zh": "规则",
+    "en_simple": "instructions about what is allowed",
+    "collocations": [
+      "school rules"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Follow the rules.",
+        "zh": "遵守规则。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  },
+  {
+    "id": "word_neighbourhood",
+    "lemma": "neighbourhood",
+    "pos": "n",
+    "zh": "社区",
+    "en_simple": "an area where people live",
+    "collocations": [
+      "in my neighbourhood"
+    ],
+    "synonyms": [
+      "area"
+    ],
+    "examples": [
+      {
+        "en": "Public places in your neighbourhood.",
+        "zh": "你社区里的公共场所。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  },
+  {
+    "id": "word_compare_ss",
+    "lemma": "compare",
+    "pos": "v",
+    "zh": "比较",
+    "en_simple": "to see how things are similar or different",
+    "collocations": [
+      "compare A and B"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Compare living in a city and a village.",
+        "zh": "比较城市与乡村生活。"
+      }
+    ],
+    "tags": [
+      "ss"
+    ]
+  }
+]

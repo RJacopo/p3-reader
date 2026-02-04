@@ -1,0 +1,165 @@
+{
+  "task_types": [
+    "compare",
+    "match",
+    "convert_units",
+    "find_remaining",
+    "greatest_number",
+    "explain_why",
+    "classify_numbers",
+    "times_as_many",
+    "calculate",
+    "read_graph",
+    "perimeter_area",
+    "angles_lines",
+    "rounding",
+    "fraction_model"
+  ],
+  "notice": [
+    "numbers",
+    "units",
+    "order_words",
+    "total_left_remaining",
+    "comparison_words",
+    "times_relation",
+    "graph_axes",
+    "shapes",
+    "perimeter_area_info",
+    "angle_words",
+    "fractions"
+  ],
+  "outputs": [
+    "number",
+    "number_with_unit",
+    "symbol_or_choice",
+    "short_sentence",
+    "table_or_graph",
+    "label_or_draw"
+  ],
+  "labels": {
+    "task:compare": {
+      "en": "Compare",
+      "zh": "比较"
+    },
+    "task:match": {
+      "en": "Match",
+      "zh": "配对"
+    },
+    "task:convert_units": {
+      "en": "Convert units",
+      "zh": "单位换算"
+    },
+    "task:find_remaining": {
+      "en": "Find remaining/left",
+      "zh": "求剩余/剩下"
+    },
+    "task:greatest_number": {
+      "en": "Greatest number",
+      "zh": "求最大/最多"
+    },
+    "task:explain_why": {
+      "en": "Explain why",
+      "zh": "解释原因"
+    },
+    "task:classify_numbers": {
+      "en": "Classify numbers",
+      "zh": "数字分类"
+    },
+    "task:times_as_many": {
+      "en": "Times as many",
+      "zh": "几倍关系"
+    },
+    "notice:numbers": {
+      "en": "Numbers",
+      "zh": "数字"
+    },
+    "notice:units": {
+      "en": "Units",
+      "zh": "单位"
+    },
+    "notice:order_words": {
+      "en": "Before/After",
+      "zh": "顺序词（先后）"
+    },
+    "notice:total_left_remaining": {
+      "en": "Total/Left/Remaining",
+      "zh": "总数/剩余"
+    },
+    "notice:comparison_words": {
+      "en": "More/Less/Difference",
+      "zh": "比较词（多/少/差）"
+    },
+    "notice:times_relation": {
+      "en": "Times relation",
+      "zh": "倍数关系"
+    },
+    "output:number": {
+      "en": "A number",
+      "zh": "一个数字"
+    },
+    "output:number_with_unit": {
+      "en": "Number + unit",
+      "zh": "数字+单位"
+    },
+    "output:symbol_or_choice": {
+      "en": "Symbol/choice",
+      "zh": "符号/选项"
+    },
+    "output:short_sentence": {
+      "en": "Short sentence",
+      "zh": "一句简短说明"
+    },
+    "task:calculate": {
+      "en": "Calculate",
+      "zh": "计算"
+    },
+    "task:read_graph": {
+      "en": "Read a graph",
+      "zh": "读图表"
+    },
+    "task:perimeter_area": {
+      "en": "Perimeter/Area",
+      "zh": "周长/面积"
+    },
+    "task:angles_lines": {
+      "en": "Angles/Lines",
+      "zh": "角与线"
+    },
+    "task:rounding": {
+      "en": "Round off",
+      "zh": "四舍五入"
+    },
+    "task:fraction_model": {
+      "en": "Fractions/model",
+      "zh": "分数/模型"
+    },
+    "notice:graph_axes": {
+      "en": "Axes/scale",
+      "zh": "坐标/刻度"
+    },
+    "notice:shapes": {
+      "en": "Shapes",
+      "zh": "图形"
+    },
+    "notice:perimeter_area_info": {
+      "en": "Length/width",
+      "zh": "长宽信息"
+    },
+    "notice:angle_words": {
+      "en": "Right/acute/obtuse",
+      "zh": "直角/锐角/钝角"
+    },
+    "notice:fractions": {
+      "en": "Fractions parts",
+      "zh": "分数部分"
+    },
+    "output:table_or_graph": {
+      "en": "Table/graph",
+      "zh": "表格/图表"
+    },
+    "output:label_or_draw": {
+      "en": "Label/draw",
+      "zh": "标注/画图"
+    }
+  }
+}

@@ -1,0 +1,259 @@
+[
+  {
+    "id": "word_classify",
+    "lemma": "classify",
+    "pos": "v",
+    "zh": "分类",
+    "en_simple": "to put things into groups",
+    "collocations": [
+      "classify … into groups"
+    ],
+    "synonyms": [
+      "group"
+    ],
+    "examples": [
+      {
+        "en": "Classify these animals into groups.",
+        "zh": "把这些动物分成不同组。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "id": "word_characteristics",
+    "lemma": "characteristics",
+    "pos": "n",
+    "zh": "特征",
+    "en_simple": "features that something has",
+    "collocations": [
+      "physical characteristics"
+    ],
+    "synonyms": [
+      "features"
+    ],
+    "examples": [
+      {
+        "en": "Identify the characteristics of fish.",
+        "zh": "找出鱼的特征。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "id": "word_reproduce",
+    "lemma": "reproduce",
+    "pos": "v",
+    "zh": "繁殖",
+    "en_simple": "to make young ones",
+    "collocations": [
+      "reproduce by laying eggs"
+    ],
+    "synonyms": [
+      "breed"
+    ],
+    "examples": [
+      {
+        "en": "Birds reproduce by laying eggs.",
+        "zh": "鸟类通过产卵繁殖。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "id": "word_scales",
+    "lemma": "scales",
+    "pos": "n",
+    "zh": "鳞片",
+    "en_simple": "small hard plates on fish skin",
+    "collocations": [
+      "covered with scales"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Fish are covered with scales.",
+        "zh": "鱼身上覆盖着鳞片。"
+      }
+    ],
+    "tags": [
+      "science",
+      "animals"
+    ]
+  },
+  {
+    "id": "word_gills",
+    "lemma": "gills",
+    "pos": "n",
+    "zh": "鳃",
+    "en_simple": "organs fish use to breathe",
+    "collocations": [
+      "have gills"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Fish have gills to breathe.",
+        "zh": "鱼用鳃呼吸。"
+      }
+    ],
+    "tags": [
+      "science",
+      "animals"
+    ]
+  },
+  {
+    "id": "word_mammals",
+    "lemma": "mammals",
+    "pos": "n",
+    "zh": "哺乳动物",
+    "en_simple": "animals that feed milk to their young",
+    "collocations": [
+      "mammals"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Humans are mammals.",
+        "zh": "人类是哺乳动物。"
+      }
+    ],
+    "tags": [
+      "science",
+      "animals"
+    ]
+  },
+  {
+    "id": "word_warm_blooded",
+    "lemma": "warm-blooded",
+    "pos": "adj",
+    "zh": "恒温的",
+    "en_simple": "having a constant body temperature",
+    "collocations": [
+      "warm-blooded animals"
+    ],
+    "synonyms": [
+      "endothermic"
+    ],
+    "examples": [
+      {
+        "en": "Birds are warm-blooded.",
+        "zh": "鸟类是恒温动物。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "id": "word_cold_blooded",
+    "lemma": "cold-blooded",
+    "pos": "adj",
+    "zh": "变温的",
+    "en_simple": "body temperature changes with surroundings",
+    "collocations": [
+      "cold-blooded animals"
+    ],
+    "synonyms": [
+      "ectothermic"
+    ],
+    "examples": [
+      {
+        "en": "Fish are cold-blooded.",
+        "zh": "鱼是变温动物。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  },
+  {
+    "id": "word_attract",
+    "lemma": "attract",
+    "pos": "v",
+    "zh": "吸引",
+    "en_simple": "to pull towards",
+    "collocations": [
+      "unlike poles attract"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Unlike poles attract.",
+        "zh": "异极相吸。"
+      }
+    ],
+    "tags": [
+      "science",
+      "magnets"
+    ]
+  },
+  {
+    "id": "word_repel",
+    "lemma": "repel",
+    "pos": "v",
+    "zh": "排斥",
+    "en_simple": "to push away",
+    "collocations": [
+      "like poles repel"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Like poles repel.",
+        "zh": "同极相斥。"
+      }
+    ],
+    "tags": [
+      "science",
+      "magnets"
+    ]
+  },
+  {
+    "id": "word_poles",
+    "lemma": "poles",
+    "pos": "n",
+    "zh": "磁极",
+    "en_simple": "the two ends of a magnet",
+    "collocations": [
+      "north pole",
+      "south pole"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "A magnet has two poles.",
+        "zh": "磁铁有两个磁极。"
+      }
+    ],
+    "tags": [
+      "science",
+      "magnets"
+    ]
+  },
+  {
+    "id": "word_fungi",
+    "lemma": "fungi",
+    "pos": "n",
+    "zh": "真菌",
+    "en_simple": "organisms like mushrooms and mould",
+    "collocations": [
+      "fungi are found in damp places"
+    ],
+    "synonyms": [],
+    "examples": [
+      {
+        "en": "Fungi grow in damp places.",
+        "zh": "真菌在潮湿处生长。"
+      }
+    ],
+    "tags": [
+      "science"
+    ]
+  }
+]

@@ -1,0 +1,228 @@
+[
+  {
+    "id": "ss_inst_0001",
+    "subject": "social_studies",
+    "topic": "environment",
+    "text_en": "State one way people keep the environment clean.",
+    "text_zh": "写出人们保持环境清洁的一种方法。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify"
+      ],
+      "notice": [
+        "keywords",
+        "examples"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "environment",
+      "identify"
+    ]
+  },
+  {
+    "id": "ss_inst_0002",
+    "subject": "social_studies",
+    "topic": "resources",
+    "text_en": "Explain why we should save water.",
+    "text_zh": "解释为什么我们应该节约用水。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "explain_reason"
+      ],
+      "notice": [
+        "cause_effect",
+        "keywords"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "resources",
+      "explain"
+    ]
+  },
+  {
+    "id": "ss_inst_0003",
+    "subject": "social_studies",
+    "topic": "community",
+    "text_en": "Compare living in a city and living in a village.",
+    "text_zh": "比较住在城市和住在乡村。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "keywords",
+        "examples"
+      ],
+      "output": "list_two"
+    },
+    "tags": [
+      "compare",
+      "community"
+    ]
+  },
+  {
+    "id": "ss_inst_0004",
+    "subject": "social_studies",
+    "topic": "maps",
+    "text_en": "Look at the map and label the river.",
+    "text_zh": "看地图并标注河流。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "map_reading"
+      ],
+      "notice": [
+        "place_names"
+      ],
+      "output": "label"
+    },
+    "tags": [
+      "map",
+      "label"
+    ]
+  },
+  {
+    "id": "ss_inst_0005",
+    "subject": "social_studies",
+    "topic": "cause_effect",
+    "text_en": "What happens if people litter?",
+    "text_zh": "如果人们乱丢垃圾会发生什么？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "cause_effect"
+      ],
+      "notice": [
+        "cause_effect",
+        "keywords"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "cause_effect",
+      "environment"
+    ]
+  },
+  {
+    "id": "ss_inst_0006",
+    "subject": "social_studies",
+    "topic": "sequence",
+    "text_en": "Put these actions in the correct order.",
+    "text_zh": "把这些行为按正确顺序排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "sequence"
+      ],
+      "notice": [
+        "time_order"
+      ],
+      "output": "short_phrase"
+    },
+    "tags": [
+      "sequence",
+      "order"
+    ]
+  },
+  {
+    "id": "ss_inst_0007",
+    "subject": "social_studies",
+    "topic": "community",
+    "text_en": "Give one example of helping your neighbours.",
+    "text_zh": "举一个帮助邻居的例子。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify"
+      ],
+      "notice": [
+        "examples"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "community",
+      "examples"
+    ]
+  },
+  {
+    "id": "ss_inst_0008",
+    "subject": "social_studies",
+    "topic": "explain",
+    "text_en": "Why do people need rules in school?",
+    "text_zh": "为什么学校需要规则？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "explain_reason"
+      ],
+      "notice": [
+        "cause_effect"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "rules",
+      "explain"
+    ]
+  },
+  {
+    "id": "ss_inst_0009",
+    "subject": "social_studies",
+    "topic": "compare",
+    "text_en": "Which is better for the environment? Give a reason.",
+    "text_zh": "哪个对环境更好？给出理由。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare",
+        "explain_reason"
+      ],
+      "notice": [
+        "keywords",
+        "cause_effect"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "compare",
+      "reason"
+    ]
+  },
+  {
+    "id": "ss_inst_0010",
+    "subject": "social_studies",
+    "topic": "identify",
+    "text_en": "Identify two public places in your neighbourhood.",
+    "text_zh": "找出你社区里的两个公共场所。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "identify"
+      ],
+      "notice": [
+        "place_names"
+      ],
+      "output": "list_two"
+    },
+    "tags": [
+      "identify",
+      "places"
+    ]
+  }
+]

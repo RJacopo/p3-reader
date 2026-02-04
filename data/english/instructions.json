@@ -1,0 +1,223 @@
+[
+  {
+    "id": "eng_inst_0001",
+    "subject": "english",
+    "topic": "comprehension",
+    "text_en": "Underline the sentence that shows the main idea.",
+    "text_zh": "划线标出体现主旨的句子。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "main_idea"
+      ],
+      "notice": [
+        "question_words",
+        "context_clues"
+      ],
+      "output": "underline_or_circle"
+    },
+    "tags": [
+      "main_idea",
+      "underline"
+    ]
+  },
+  {
+    "id": "eng_inst_0002",
+    "subject": "english",
+    "topic": "comprehension",
+    "text_en": "Based on the passage, what can you infer?",
+    "text_zh": "根据短文，你能推断出什么？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "infer"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "infer",
+      "based_on"
+    ]
+  },
+  {
+    "id": "eng_inst_0003",
+    "subject": "english",
+    "topic": "grammar",
+    "text_en": "Circle the verb in each sentence.",
+    "text_zh": "圈出每句中的动词。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "grammar_instruction"
+      ],
+      "notice": [
+        "question_words"
+      ],
+      "output": "underline_or_circle"
+    },
+    "tags": [
+      "grammar",
+      "circle"
+    ]
+  },
+  {
+    "id": "eng_inst_0004",
+    "subject": "english",
+    "topic": "vocab",
+    "text_en": "Choose the word that best completes the sentence.",
+    "text_zh": "选择最合适的词完成句子。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "vocab_in_context"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "vocab",
+      "complete"
+    ]
+  },
+  {
+    "id": "eng_inst_0005",
+    "subject": "english",
+    "topic": "sequence",
+    "text_en": "Number the events in the correct order.",
+    "text_zh": "按正确顺序给事件编号。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "sequence"
+      ],
+      "notice": [
+        "time_order"
+      ],
+      "output": "short_phrase"
+    },
+    "tags": [
+      "sequence",
+      "order"
+    ]
+  },
+  {
+    "id": "eng_inst_0006",
+    "subject": "english",
+    "topic": "details",
+    "text_en": "Find two details that support the answer.",
+    "text_zh": "找出两个支持答案的细节。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "details"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "short_phrase"
+    },
+    "tags": [
+      "details",
+      "support"
+    ]
+  },
+  {
+    "id": "eng_inst_0007",
+    "subject": "english",
+    "topic": "comprehension",
+    "text_en": "Which statement is most likely true?",
+    "text_zh": "以下哪个陈述最可能为真？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "infer"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "infer",
+      "likely"
+    ]
+  },
+  {
+    "id": "eng_inst_0008",
+    "subject": "english",
+    "topic": "grammar",
+    "text_en": "Fill in the blank with the correct preposition.",
+    "text_zh": "用正确的介词填空。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "grammar_instruction"
+      ],
+      "notice": [
+        "question_words"
+      ],
+      "output": "short_phrase"
+    },
+    "tags": [
+      "grammar",
+      "preposition"
+    ]
+  },
+  {
+    "id": "eng_inst_0009",
+    "subject": "english",
+    "topic": "vocab",
+    "text_en": "What does the word '___' mean in this paragraph?",
+    "text_zh": "在这段话里，'___' 这个词是什么意思？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "vocab_in_context"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "short_phrase"
+    },
+    "tags": [
+      "vocab",
+      "meaning"
+    ]
+  },
+  {
+    "id": "eng_inst_0010",
+    "subject": "english",
+    "topic": "main_idea",
+    "text_en": "What is the best title for this passage?",
+    "text_zh": "这篇文章最合适的标题是什么？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "main_idea"
+      ],
+      "notice": [
+        "context_clues"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "main_idea",
+      "title"
+    ]
+  }
+]

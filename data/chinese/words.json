@@ -1,0 +1,113 @@
+[
+  {
+    "id": "zh_word_概括",
+    "lemma": "概括",
+    "pos": "动词",
+    "zh": "用简短的话说出主要内容",
+    "en_simple": "summarize",
+    "collocations": [
+      "概括段落",
+      "概括主要内容"
+    ],
+    "synonyms": [
+      "总结"
+    ],
+    "examples": [
+      {
+        "en": "用自己的话概括这一段。",
+        "zh": "Summarize this paragraph."
+      }
+    ],
+    "tags": [
+      "chinese"
+    ]
+  },
+  {
+    "id": "zh_word_中心思想",
+    "lemma": "中心思想",
+    "pos": "名词",
+    "zh": "文章最重要的意思",
+    "en_simple": "main idea",
+    "collocations": [
+      "中心思想是什么"
+    ],
+    "synonyms": [
+      "主旨"
+    ],
+    "examples": [
+      {
+        "en": "找出文章的中心思想。",
+        "zh": "Find the main idea."
+      }
+    ],
+    "tags": [
+      "chinese"
+    ]
+  },
+  {
+    "id": "zh_word_推断",
+    "lemma": "推断",
+    "pos": "动词",
+    "zh": "根据线索猜出答案",
+    "en_simple": "infer",
+    "collocations": [
+      "根据内容推断"
+    ],
+    "synonyms": [
+      "判断"
+    ],
+    "examples": [
+      {
+        "en": "你能从文中推断出什么？",
+        "zh": "What can you infer?"
+      }
+    ],
+    "tags": [
+      "chinese"
+    ]
+  },
+  {
+    "id": "zh_word_细节",
+    "lemma": "细节",
+    "pos": "名词",
+    "zh": "具体的小信息",
+    "en_simple": "detail",
+    "collocations": [
+      "找出细节"
+    ],
+    "synonyms": [
+      "具体内容"
+    ],
+    "examples": [
+      {
+        "en": "从文中找出支持答案的句子。",
+        "zh": "Find a sentence that supports the answer."
+      }
+    ],
+    "tags": [
+      "chinese"
+    ]
+  },
+  {
+    "id": "zh_word_顺序",
+    "lemma": "顺序",
+    "pos": "名词",
+    "zh": "先后排列的次序",
+    "en_simple": "order/sequence",
+    "collocations": [
+      "按顺序排列"
+    ],
+    "synonyms": [
+      "次序"
+    ],
+    "examples": [
+      {
+        "en": "按事情发生的顺序排列。",
+        "zh": "Arrange in order."
+      }
+    ],
+    "tags": [
+      "chinese"
+    ]
+  }
+]

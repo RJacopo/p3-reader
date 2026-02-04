@@ -1,0 +1,3766 @@
+[
+  {
+    "id": "math_inst_0001",
+    "subject": "math",
+    "topic": "measurement",
+    "text_en": "Write 2 km 350 m in metres.",
+    "text_zh": "把 2 km 350 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "measurement",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0002",
+    "subject": "math",
+    "topic": "comparison",
+    "text_en": "Compare 356 and 365 using <, = or >.",
+    "text_zh": "用 <, = 或 > 比较 356 和 365。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "compare",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0003",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 120 packets. After 79 were sold, 48 more were packed. Find the number of packets left.",
+    "text_zh": "原来有120包。卖出79包后，又装了48包。求还剩多少包。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "remaining",
+      "word_problem",
+      "after"
+    ]
+  },
+  {
+    "id": "math_inst_0004",
+    "subject": "math",
+    "topic": "number_sense",
+    "text_en": "Sort these numbers into even and odd numbers.",
+    "text_zh": "把这些数字分成偶数和奇数。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "classify_numbers"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "even_odd",
+      "classify"
+    ]
+  },
+  {
+    "id": "math_inst_0005",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Divide 54 by 3.",
+    "text_zh": "54 ÷ 3。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "division",
+      "equal_groups"
+    ]
+  },
+  {
+    "id": "math_inst_0006",
+    "subject": "math",
+    "topic": "bar_model",
+    "text_en": "A has 3 times as many stickers as B. Together they have 80 stickers. Find the number of stickers B has.",
+    "text_zh": "A 的贴纸是 B 的 3 倍，一共有 80 张。求 B 有多少张。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "times_as_many"
+      ],
+      "notice": [
+        "numbers",
+        "times_relation",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "times",
+      "word_problem",
+      "bar_model"
+    ]
+  },
+  {
+    "id": "math_inst_0007",
+    "subject": "math",
+    "topic": "measurement",
+    "text_en": "Match the distances that are equal.",
+    "text_zh": "把相等的距离配对。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "match",
+        "convert_units"
+      ],
+      "notice": [
+        "units",
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "units",
+      "match",
+      "measurement"
+    ]
+  },
+  {
+    "id": "math_inst_0008",
+    "subject": "math",
+    "topic": "number_sense",
+    "text_en": "Explain why 234 is even but 243 is not even.",
+    "text_zh": "解释为什么 234 是偶数但 243 不是偶数。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "explain_why"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "short_sentence"
+    },
+    "tags": [
+      "even_odd",
+      "explain"
+    ]
+  },
+  {
+    "id": "math_inst_0009",
+    "subject": "math",
+    "topic": "measurement",
+    "text_en": "Write 1 m 25 cm in centimetres.",
+    "text_zh": "把 1 m 25 cm 写成厘米。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0010",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "A plane travelled 1884 km. The remaining distance is 707 km. Find the total distance.",
+    "text_zh": "飞机飞了 1884 km，还剩 707 km。求总路程。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "total",
+      "remaining",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0011",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0012",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 609 and 4606.",
+    "text_zh": "求 609 和 4606 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0013",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 174 cards. After 45 were given away, 99 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 174 张卡。送出 45 张后，又买了 99 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0014",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 9135 and 1524.",
+    "text_zh": "求 9135 和 1524 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0015",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 16 cm long and 2 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 16 cm，宽 2 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0016",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 2535, 4582, 4811 in ascending order.",
+    "text_zh": "把 2535、4582、9279 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0017",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 3 cm long and 10 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 3 cm，宽 10 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0018",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 426 cards. After 342 were given away, 94 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 426 张卡。送出 342 张后，又买了 94 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0019",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $28.35. Tom pays $33.00. Find the change.",
+    "text_zh": "玩具价格 $28.35。Tom 付 $33.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0020",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 11 cm long and 14 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 11 cm，宽 14 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0021",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 3615, 7924, 6574 in ascending order.",
+    "text_zh": "把 3615、7924、5552 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0022",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 39 × 9.",
+    "text_zh": "计算 39 × 9。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0023",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 4 kg 150 g to grams.",
+    "text_zh": "把 4 kg 150 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0024",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 1 L 600 mL in millilitres.",
+    "text_zh": "把 1 L 600 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0025",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 9 kg 100 g to grams.",
+    "text_zh": "把 9 kg 100 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0026",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0027",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 9:05. It lasts 130 minutes. What time does it end?",
+    "text_zh": "一节课 9:05 开始，持续 130 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0028",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 9244 and 4903.",
+    "text_zh": "求 9244 和 4903 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0029",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0030",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 14 cm long and 11 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 14 cm，宽 11 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0031",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 420 cards. After 45 were given away, 10 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 420 张卡。送出 45 张后，又买了 10 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0032",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0033",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 455 cards. After 158 were given away, 15 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 455 张卡。送出 158 张后，又买了 15 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0034",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 111 cards. After 58 were given away, 40 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 111 张卡。送出 58 张后，又买了 40 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0035",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 11:25. It lasts 60 minutes. What time does it end?",
+    "text_zh": "一节课 11:25 开始，持续 60 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0036",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 12 kg 350 g to grams.",
+    "text_zh": "把 12 kg 350 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0037",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0038",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 2 km 780 m in metres.",
+    "text_zh": "把 2 km 780 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0039",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0040",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 80 × 8.",
+    "text_zh": "计算 80 × 8。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0041",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 143 cards. After 69 were given away, 53 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 143 张卡。送出 69 张后，又买了 53 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0042",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 4 km 880 m in metres.",
+    "text_zh": "把 4 km 880 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0043",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 2 kg 400 g to grams.",
+    "text_zh": "把 2 kg 400 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0044",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 6168, 7572, 5386 in ascending order.",
+    "text_zh": "把 6168、7572、2084 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0045",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 350 cards. After 171 were given away, 32 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 350 张卡。送出 171 张后，又买了 32 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0046",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0047",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 7:50. It lasts 155 minutes. What time does it end?",
+    "text_zh": "一节课 7:50 开始，持续 155 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0048",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 45 × 3.",
+    "text_zh": "计算 45 × 3。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0049",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 441 cards. After 297 were given away, 73 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 441 张卡。送出 297 张后，又买了 73 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0050",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 7 km 750 m in metres.",
+    "text_zh": "把 7 km 750 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0051",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 3 L 400 mL in millilitres.",
+    "text_zh": "把 3 L 400 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0052",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 77 × 5.",
+    "text_zh": "计算 77 × 5。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0053",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 971 and 1896.",
+    "text_zh": "求 971 和 1896 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0054",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 92 × 3.",
+    "text_zh": "计算 92 × 3。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0055",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0056",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 5 L 150 mL in millilitres.",
+    "text_zh": "把 5 L 150 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0057",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 4 L 750 mL in millilitres.",
+    "text_zh": "把 4 L 750 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0058",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $18.85. Tom pays $18.00. Find the change.",
+    "text_zh": "玩具价格 $18.85。Tom 付 $18.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0059",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0060",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0061",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 8997 and 4471.",
+    "text_zh": "求 8997 和 4471 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0062",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0063",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 4 kg 500 g to grams.",
+    "text_zh": "把 4 kg 500 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0064",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 750 mL in millilitres.",
+    "text_zh": "把 2 L 750 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0065",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 5315, 9201, 3927 in ascending order.",
+    "text_zh": "把 5315、9201、9317 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0066",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 5089 and 8417.",
+    "text_zh": "求 5089 和 8417 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0067",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 9 cm long and 4 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 9 cm，宽 4 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0068",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 6 kg 900 g to grams.",
+    "text_zh": "把 6 kg 900 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0069",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $2.50. Tom pays $7.00. Find the change.",
+    "text_zh": "玩具价格 $2.50。Tom 付 $7.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0070",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 2832, 6947, 6038 in ascending order.",
+    "text_zh": "把 2832、6947、4923 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0071",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 4946, 2290, 2403 in ascending order.",
+    "text_zh": "把 4946、2290、8962 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0072",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 8927 and 2160.",
+    "text_zh": "求 8927 和 2160 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0073",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 96 × 5.",
+    "text_zh": "计算 96 × 5。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0074",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $12.40. Tom pays $17.00. Find the change.",
+    "text_zh": "玩具价格 $12.40。Tom 付 $17.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0075",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 336 cards. After 112 were given away, 96 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 336 张卡。送出 112 张后，又买了 96 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0076",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 7 km 860 m in metres.",
+    "text_zh": "把 7 km 860 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0077",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0078",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 15 kg 850 g to grams.",
+    "text_zh": "把 15 kg 850 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0079",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 2:15. It lasts 80 minutes. What time does it end?",
+    "text_zh": "一节课 2:15 开始，持续 80 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0080",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 5739 and 444.",
+    "text_zh": "求 5739 和 444 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0081",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 10 cm long and 11 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 10 cm，宽 11 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0082",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 63 cards. After 14 were given away, 95 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 63 张卡。送出 14 张后，又买了 95 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0083",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0084",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 4750, 2104, 1514 in ascending order.",
+    "text_zh": "把 4750、2104、6413 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0085",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 8623 and 3999.",
+    "text_zh": "求 8623 和 3999 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0086",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 8 km 280 m in metres.",
+    "text_zh": "把 8 km 280 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0087",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $10.90. Tom pays $15.00. Find the change.",
+    "text_zh": "玩具价格 $10.90。Tom 付 $15.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0088",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 461 cards. After 252 were given away, 108 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 461 张卡。送出 252 张后，又买了 108 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0089",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 200 mL in millilitres.",
+    "text_zh": "把 2 L 200 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0090",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 7262 and 5904.",
+    "text_zh": "求 7262 和 5904 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0091",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 4 L 750 mL in millilitres.",
+    "text_zh": "把 4 L 750 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0092",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0093",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 2612, 1993, 7596 in ascending order.",
+    "text_zh": "把 2612、1993、6559 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0094",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 4273 and 3239.",
+    "text_zh": "求 4273 和 3239 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0095",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 334 cards. After 239 were given away, 22 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 334 张卡。送出 239 张后，又买了 22 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0096",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 450 mL in millilitres.",
+    "text_zh": "把 2 L 450 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0097",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 4:05. It lasts 150 minutes. What time does it end?",
+    "text_zh": "一节课 4:05 开始，持续 150 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0098",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $8.05. Tom pays $8.00. Find the change.",
+    "text_zh": "玩具价格 $8.05。Tom 付 $8.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0099",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 4072 and 2824.",
+    "text_zh": "求 4072 和 2824 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0100",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 4 L 800 mL in millilitres.",
+    "text_zh": "把 4 L 800 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0101",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 265 cards. After 241 were given away, 12 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 265 张卡。送出 241 张后，又买了 12 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0102",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 60 × 2.",
+    "text_zh": "计算 60 × 2。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0103",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 3 L 750 mL in millilitres.",
+    "text_zh": "把 3 L 750 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0104",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 7 km 720 m in metres.",
+    "text_zh": "把 7 km 720 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0105",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0106",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0107",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 3:15. It lasts 100 minutes. What time does it end?",
+    "text_zh": "一节课 3:15 开始，持续 100 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0108",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 89 cards. After 17 were given away, 100 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 89 张卡。送出 17 张后，又买了 100 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0109",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 2 kg 100 g to grams.",
+    "text_zh": "把 2 kg 100 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0110",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 18 cm long and 10 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 18 cm，宽 10 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0111",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $12.05. Tom pays $12.00. Find the change.",
+    "text_zh": "玩具价格 $12.05。Tom 付 $12.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0112",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 20 × 6.",
+    "text_zh": "计算 20 × 6。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0113",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 4053 and 6715.",
+    "text_zh": "求 4053 和 6715 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0114",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 9533 and 4133.",
+    "text_zh": "求 9533 和 4133 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0115",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 4 cm long and 11 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 4 cm，宽 11 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0116",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 7068 and 9662.",
+    "text_zh": "求 7068 和 9662 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0117",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 19 cm long and 7 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 19 cm，宽 7 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0118",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 4 km 860 m in metres.",
+    "text_zh": "把 4 km 860 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0119",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0120",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 8 kg 450 g to grams.",
+    "text_zh": "把 8 kg 450 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0121",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 500 mL in millilitres.",
+    "text_zh": "把 2 L 500 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0122",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 6:05. It lasts 10 minutes. What time does it end?",
+    "text_zh": "一节课 6:05 开始，持续 10 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0123",
+    "subject": "math",
+    "topic": "measurement_time",
+    "text_en": "A lesson starts at 10:45. It lasts 40 minutes. What time does it end?",
+    "text_zh": "一节课 10:45 开始，持续 40 分钟。结束时间是几点？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "order_words"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "time",
+      "duration"
+    ]
+  },
+  {
+    "id": "math_inst_0124",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 9008 and 3592.",
+    "text_zh": "求 9008 和 3592 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0125",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $18.20. Tom pays $20.00. Find the change.",
+    "text_zh": "玩具价格 $18.20。Tom 付 $20.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0126",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 4202 and 6154.",
+    "text_zh": "求 4202 和 6154 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0127",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 3 km 570 m in metres.",
+    "text_zh": "把 3 km 570 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0128",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $47.45. Tom pays $47.00. Find the change.",
+    "text_zh": "玩具价格 $47.45。Tom 付 $47.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0129",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0130",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $21.15. Tom pays $22.00. Find the change.",
+    "text_zh": "玩具价格 $21.15。Tom 付 $22.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0131",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 2 km 140 m in metres.",
+    "text_zh": "把 2 km 140 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0132",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0133",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $11.40. Tom pays $13.00. Find the change.",
+    "text_zh": "玩具价格 $11.40。Tom 付 $13.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0134",
+    "subject": "math",
+    "topic": "geometry_perimeter_area",
+    "text_en": "A rectangle is 9 cm long and 13 cm wide. Find its perimeter.",
+    "text_zh": "长方形长 9 cm，宽 13 cm。求周长。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "perimeter_area"
+      ],
+      "notice": [
+        "numbers",
+        "units",
+        "perimeter_area_info"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "perimeter",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0135",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 7 kg 450 g to grams.",
+    "text_zh": "把 7 kg 450 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0136",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $33.40. Tom pays $33.00. Find the change.",
+    "text_zh": "玩具价格 $33.40。Tom 付 $33.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0137",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 7139 and 4633.",
+    "text_zh": "求 7139 和 4633 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0138",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 1058, 6464, 3143 in ascending order.",
+    "text_zh": "把 1058、6464、5291 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0139",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 68 × 6.",
+    "text_zh": "计算 68 × 6。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0140",
+    "subject": "math",
+    "topic": "graphs_bar_graph",
+    "text_en": "Read the bar graph and answer: Which category has the greatest value?",
+    "text_zh": "阅读条形图：哪个类别的数量最多？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "read_graph",
+        "greatest_number"
+      ],
+      "notice": [
+        "graph_axes",
+        "numbers"
+      ],
+      "output": "choice"
+    },
+    "tags": [
+      "bar_graph",
+      "greatest"
+    ]
+  },
+  {
+    "id": "math_inst_0141",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 5 L 50 mL in millilitres.",
+    "text_zh": "把 5 L 50 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0142",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 1432 and 2542.",
+    "text_zh": "求 1432 和 2542 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0143",
+    "subject": "math",
+    "topic": "money",
+    "text_en": "A toy costs $4.55. Tom pays $5.00. Find the change.",
+    "text_zh": "玩具价格 $4.55。Tom 付 $5.00。找回多少钱？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "total_left_remaining"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "money",
+      "change",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0144",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 100 mL in millilitres.",
+    "text_zh": "把 2 L 100 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0145",
+    "subject": "math",
+    "topic": "measurement_length",
+    "text_en": "Write 6 km 60 m in metres.",
+    "text_zh": "把 6 km 60 m 写成以米为单位。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "length",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0146",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 7 kg 400 g to grams.",
+    "text_zh": "把 7 kg 400 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0147",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  },
+  {
+    "id": "math_inst_0148",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 5994 and 9273.",
+    "text_zh": "求 5994 和 9273 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0149",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 5 L 250 mL in millilitres.",
+    "text_zh": "把 5 L 250 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0150",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 143 cards. After 112 were given away, 108 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 143 张卡。送出 112 张后，又买了 108 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0151",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 64 × 2.",
+    "text_zh": "计算 64 × 2。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0152",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 54 × 9.",
+    "text_zh": "计算 54 × 9。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0153",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 2 L 450 mL in millilitres.",
+    "text_zh": "把 2 L 450 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0154",
+    "subject": "math",
+    "topic": "multiplication_division",
+    "text_en": "Calculate 25 × 5.",
+    "text_zh": "计算 25 × 5。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "multiplication",
+      "calculate"
+    ]
+  },
+  {
+    "id": "math_inst_0155",
+    "subject": "math",
+    "topic": "numbers_up_to_10000",
+    "text_en": "Arrange 8711, 4644, 4269 in ascending order.",
+    "text_zh": "把 8711、4644、8541 按从小到大排列。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "compare"
+      ],
+      "notice": [
+        "numbers"
+      ],
+      "output": "symbol_or_choice"
+    },
+    "tags": [
+      "order",
+      "numbers"
+    ]
+  },
+  {
+    "id": "math_inst_0156",
+    "subject": "math",
+    "topic": "measurement_mass",
+    "text_en": "Convert 10 kg 400 g to grams.",
+    "text_zh": "把 10 kg 400 g 换算成克。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "mass",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0157",
+    "subject": "math",
+    "topic": "word_problems",
+    "text_en": "There were 72 cards. After 52 were given away, 29 more cards were bought. How many cards are there now?",
+    "text_zh": "原来有 72 张卡。送出 52 张后，又买了 29 张。现在共有多少张？",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "find_remaining"
+      ],
+      "notice": [
+        "numbers",
+        "order_words",
+        "total_left_remaining"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "after",
+      "total",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0158",
+    "subject": "math",
+    "topic": "measurement_volume",
+    "text_en": "Write 3 L 450 mL in millilitres.",
+    "text_zh": "把 3 L 450 mL 写成毫升。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "convert_units"
+      ],
+      "notice": [
+        "numbers",
+        "units"
+      ],
+      "output": "number_with_unit"
+    },
+    "tags": [
+      "units",
+      "volume",
+      "convert"
+    ]
+  },
+  {
+    "id": "math_inst_0159",
+    "subject": "math",
+    "topic": "addition_subtraction",
+    "text_en": "Find the difference between 4773 and 5853.",
+    "text_zh": "求 4773 和 5853 的差。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "calculate"
+      ],
+      "notice": [
+        "numbers",
+        "comparison_words"
+      ],
+      "output": "number"
+    },
+    "tags": [
+      "difference",
+      "word_problem"
+    ]
+  },
+  {
+    "id": "math_inst_0160",
+    "subject": "math",
+    "topic": "geometry_angles_lines",
+    "text_en": "Circle the right angles in the diagram.",
+    "text_zh": "在图中圈出直角。",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "angles_lines"
+      ],
+      "notice": [
+        "shapes",
+        "angle_words"
+      ],
+      "output": "label_or_draw"
+    },
+    "tags": [
+      "angles",
+      "geometry"
+    ]
+  }
+]

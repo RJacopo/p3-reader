@@ -1,0 +1,220 @@
+[
+  {
+    "id": "zh_inst_0001",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "找出文章的中心思想。",
+    "text_zh": "Find the main idea of the passage.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找主旨"
+      ],
+      "notice": [
+        "关键词",
+        "时间顺序"
+      ],
+      "output": "一句话"
+    },
+    "tags": [
+      "找主旨",
+      "阅读理解"
+    ]
+  },
+  {
+    "id": "zh_inst_0002",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "根据文章内容判断对错。",
+    "text_zh": "Decide if the statements are true or false.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找细节"
+      ],
+      "notice": [
+        "关键词",
+        "人物地点"
+      ],
+      "output": "选项"
+    },
+    "tags": [
+      "找细节"
+    ]
+  },
+  {
+    "id": "zh_inst_0003",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "文中“____”这个词语的意思是什么？",
+    "text_zh": "What does the word mean in the text?",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "词语意思"
+      ],
+      "notice": [
+        "关键词",
+        "代词指代"
+      ],
+      "output": "短语"
+    },
+    "tags": [
+      "词语意思",
+      "阅读理解"
+    ]
+  },
+  {
+    "id": "zh_inst_0004",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "按事情发生的顺序排列。",
+    "text_zh": "Arrange in the correct order.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "排序"
+      ],
+      "notice": [
+        "时间顺序"
+      ],
+      "output": "选项"
+    },
+    "tags": [
+      "排序",
+      "阅读理解"
+    ]
+  },
+  {
+    "id": "zh_inst_0005",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "从文中找出支持答案的句子。",
+    "text_zh": "Find a sentence that supports the answer.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找细节"
+      ],
+      "notice": [
+        "关键词"
+      ],
+      "output": "划线/圈出"
+    },
+    "tags": [
+      "找细节"
+    ]
+  },
+  {
+    "id": "zh_inst_0006",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "你能从文中推断出什么？",
+    "text_zh": "What can you infer?",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "推断"
+      ],
+      "notice": [
+        "关键词",
+        "因果关系"
+      ],
+      "output": "一句话"
+    },
+    "tags": [
+      "推断"
+    ]
+  },
+  {
+    "id": "zh_inst_0007",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "用自己的话概括这一段。",
+    "text_zh": "Summarize this paragraph.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "概括"
+      ],
+      "notice": [
+        "关键词"
+      ],
+      "output": "一句话"
+    },
+    "tags": [
+      "概括"
+    ]
+  },
+  {
+    "id": "zh_inst_0008",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "找出人物是谁。",
+    "text_zh": "Identify who the person is.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找细节"
+      ],
+      "notice": [
+        "人物地点"
+      ],
+      "output": "短语"
+    },
+    "tags": [
+      "找细节"
+    ]
+  },
+  {
+    "id": "zh_inst_0009",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "文中“他/她/它”指的是谁？",
+    "text_zh": "What does the pronoun refer to?",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找细节"
+      ],
+      "notice": [
+        "代词指代"
+      ],
+      "output": "短语"
+    },
+    "tags": [
+      "代词指代",
+      "找细节"
+    ]
+  },
+  {
+    "id": "zh_inst_0010",
+    "subject": "chinese",
+    "topic": "阅读理解",
+    "text_en": "这篇文章最合适的标题是什么？",
+    "text_zh": "Choose the best title.",
+    "keywords": [],
+    "glossary_refs": [],
+    "quiz": {
+      "task_types": [
+        "找主旨"
+      ],
+      "notice": [
+        "关键词"
+      ],
+      "output": "选项"
+    },
+    "tags": [
+      "找主旨"
+    ]
+  }
+]

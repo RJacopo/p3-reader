@@ -1,0 +1,85 @@
+{
+  "task_types": [
+    "找主旨",
+    "找细节",
+    "推断",
+    "词语意思",
+    "排序",
+    "概括"
+  ],
+  "notice": [
+    "关键词",
+    "人物地点",
+    "时间顺序",
+    "因果关系",
+    "代词指代"
+  ],
+  "outputs": [
+    "选项",
+    "短语",
+    "一句话",
+    "划线/圈出"
+  ],
+  "labels": {
+    "task:找主旨": {
+      "en": "Main idea",
+      "zh": "找主旨"
+    },
+    "task:找细节": {
+      "en": "Find details",
+      "zh": "找细节"
+    },
+    "task:推断": {
+      "en": "Infer",
+      "zh": "推断"
+    },
+    "task:词语意思": {
+      "en": "Word meaning",
+      "zh": "词语意思"
+    },
+    "task:排序": {
+      "en": "Sequence",
+      "zh": "排序"
+    },
+    "task:概括": {
+      "en": "Summarize",
+      "zh": "概括"
+    },
+    "notice:关键词": {
+      "en": "Keywords",
+      "zh": "关键词"
+    },
+    "notice:人物地点": {
+      "en": "People/places",
+      "zh": "人物地点"
+    },
+    "notice:时间顺序": {
+      "en": "Time order",
+      "zh": "时间顺序"
+    },
+    "notice:因果关系": {
+      "en": "Cause & effect",
+      "zh": "因果关系"
+    },
+    "notice:代词指代": {
+      "en": "Reference",
+      "zh": "代词指代"
+    },
+    "output:选项": {
+      "en": "Choice",
+      "zh": "选项"
+    },
+    "output:短语": {
+      "en": "Short phrase",
+      "zh": "短语"
+    },
+    "output:一句话": {
+      "en": "Sentence",
+      "zh": "一句话"
+    },
+    "output:划线/圈出": {
+      "en": "Underline/circle",
+      "zh": "划线/圈出"
+    }
+  }
+}
